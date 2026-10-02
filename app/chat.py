@@ -52,6 +52,9 @@ class Asker:
     def __init__(self, memory: Memory):
         self.memory = memory
         self._fallback = None
+        # Backboard chat needs LLM credits on the account. Try once; if it reports no credits,
+        # stop paying the round-trip on every question until the process restarts.
+        self.backboard_chat = os.environ.get("BACKBOARD_CHAT", "auto").lower() != "off"
 
     def fallback(self):
         if self._fallback is None:
@@ -67,12 +70,15 @@ class Asker:
                 facts = [m["content"] for m in self.memory.search(question, limit=6)]
             except Exception as e:
                 log.warning("memory search failed: %s", e)
-            try:
-                answer, tid = self.memory.chat(f"Ledger summary:\n{ledger_summary}\n\nQuestion: {question}", thread_id)
-                if answer:
-                    return {"answer": answer, "thread_id": tid, "via": "backboard-chat", "facts": facts}
-            except Exception as e:
-                log.warning("backboard chat failed: %s", e)
+            if self.backboard_chat:
+                try:
+                    answer, tid = self.memory.chat(f"Ledger summary:\n{ledger_summary}\n\nQuestion: {question}", thread_id)
+                    if answer:
+                        return {"answer": answer, "thread_id": tid, "via": "backboard-chat", "facts": facts}
+                    self.backboard_chat = False
+                    log.warning("Backboard chat disabled for this process (no LLM credits); using open-weight fallback")
+                except Exception as e:
+                    log.warning("backboard chat failed: %s", e)
         user = f"Remembered household facts:\n" + ("\n".join(f"- {f}" for f in facts) or "- (none)") + \
                f"\n\nLedger summary:\n{ledger_summary}\n\nQuestion: {question}"
         answer = self.fallback().complete(SYSTEM, user)

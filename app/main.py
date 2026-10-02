@@ -8,6 +8,7 @@ from __future__ import annotations
 import logging
 import os
 import sys
+import threading
 from datetime import date
 from pathlib import Path
 
@@ -39,12 +40,31 @@ memory = Memory()
 asker = Asker(memory)
 
 
+_backend_lock = threading.Lock()
+
+
 def backend():
     global _backend
-    if _backend is None:
-        _backend = get_backend()
-        log.info("parser backend: %s", _backend.name)
+    with _backend_lock:
+        if _backend is None:
+            _backend = get_backend()
+            log.info("parser backend: %s", _backend.name)
     return _backend
+
+
+def _prewarm():
+    try:
+        backend()
+        if os.environ.get("PARSER_BACKEND", "ollama") == "tinker":
+            asker.fallback()
+        log.info("prewarm done")
+    except Exception:
+        log.exception("prewarm failed (will retry on first request)")
+
+
+@app.on_event("startup")
+def _startup():
+    threading.Thread(target=_prewarm, daemon=True).start()
 
 
 class ParseIn(BaseModel):
