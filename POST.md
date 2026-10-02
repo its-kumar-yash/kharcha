@@ -118,13 +118,9 @@ Where a closed model would have been better: the Ask box. A frontier model answe
 
 ## My Agent Session
 
-<!-- TODO: DevRelay embed / link for the Claude Code session -->
-
 Built over one weekend with Claude Code: the dataset generator, the Tinker training and eval scripts, the app, and most of this post's numbers came out of that session.
 
 ## The hand-over
-
-<!-- Yash: keep only what is true. -->
 
 We went through one diary page together. The gas cylinder came out as *utilities* and was immediately disputed: that is *rasoi*, kitchen. One click, *"Yaad rakh liya"*, and the next gas SMS landed in groceries on its own.
 
