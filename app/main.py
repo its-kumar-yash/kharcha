@@ -22,6 +22,7 @@ sys.path.insert(0, str(ROOT))
 load_dotenv(ROOT / ".env")
 
 from app import db  # noqa: E402
+from app.chat import Asker  # noqa: E402
 from app.memory import Memory  # noqa: E402
 from app.parser import ParseError, get_backend  # noqa: E402
 from data.taxonomy import CATEGORIES  # noqa: E402
@@ -35,6 +36,7 @@ app.mount("/static", StaticFiles(directory=STATIC), name="static")
 
 _backend = None
 memory = Memory()
+asker = Asker(memory)
 
 
 def backend():
@@ -131,7 +133,16 @@ def delete_entry(entry_id: int):
 @app.post("/fact")
 def fact(inp: FactIn):
     try:
-        memory.remember_fact(inp.text.strip())
+        stored = memory.remember_fact(inp.text.strip())
+    except Exception as e:
+        raise HTTPException(502, str(e))
+    return {"ok": True, "remembered": stored}
+
+
+@app.delete("/memories/{memory_id}")
+def forget(memory_id: str):
+    try:
+        memory.forget(memory_id)
     except Exception as e:
         raise HTTPException(502, str(e))
     return {"ok": True}
@@ -141,10 +152,10 @@ def fact(inp: FactIn):
 def ask(inp: AskIn):
     month = inp.month or date.today().strftime("%Y-%m")
     try:
-        answer, thread_id = memory.ask(inp.question, db.summary_text(month), inp.thread_id)
+        return asker.ask(inp.question, db.summary_text(month), inp.thread_id)
     except Exception as e:
+        log.exception("ask failed")
         raise HTTPException(502, str(e))
-    return {"answer": answer, "thread_id": thread_id}
 
 
 @app.get("/memories")

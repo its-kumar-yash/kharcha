@@ -40,30 +40,22 @@ def _field(obj, key):
     return getattr(obj, key, None)
 
 
-def mean_loss(fwdbwd_output) -> float:
-    """Mean NLL over supervised tokens. Tinker returns per-datum logprobs; weights come back
-    normalised (reduction='mean' in conversation_to_datum), so sum(-lp*w) is already a mean."""
+def mean_loss(fwdbwd_output, batch) -> float:
+    """Mean NLL per supervised token. Tinker returns per-position logprobs for the whole sequence;
+    we weight them with the datum's own (normalised) loss weights so prompt tokens don't dilute it."""
     total, n = 0.0, 0
-    for out in fwdbwd_output.loss_fn_outputs:
+    for out, datum in zip(fwdbwd_output.loss_fn_outputs, batch):
         lp = _field(out, "logprobs")
         if lp is None:
-            break
+            continue
         lp = _arr(lp)
-        w = _field(out, "weights")
-        if w is not None:
-            w = _arr(w)
-            total += float(-(lp * w).sum())
-            n += 1
-        else:
-            total += float(-lp.mean())
-            n += 1
-    if n:
-        return total / n
-    m = getattr(fwdbwd_output, "metrics", {}) or {}
-    for k in ("loss", "nll", "mean_nll", "loss:sum"):
-        if k in m:
-            return float(m[k])
-    return float("nan")
+        w = _arr(datum.loss_fn_inputs["weights"])
+        if len(w) != len(lp):
+            w = w[: len(lp)]
+            lp = lp[: len(w)]
+        total += float(-(lp * w).sum()) / max(float(w.sum()), 1e-9)
+        n += 1
+    return total / n if n else float("nan")
 
 
 def main():
@@ -115,12 +107,12 @@ def main():
             op = tc.optim_step(adam_params=tinker.AdamParams(learning_rate=lr))
             fb_out = fb.result()
             op.result()
-            loss = mean_loss(fb_out)
+            loss = mean_loss(fb_out, batch)
             log["train_loss"].append([step, loss])
             msg = f"step {step:4d}/{total_steps} lr={lr:.2e} train_nll={loss:.4f}"
             if step % args.eval_every == 0 or step == total_steps - 1:
                 v = tc.forward(val_data, "cross_entropy").result()
-                vloss = mean_loss(v)
+                vloss = mean_loss(v, val_data)
                 log["val_loss"].append([step, vloss])
                 msg += f" val_nll={vloss:.4f}"
             print(msg, flush=True)

@@ -4,7 +4,7 @@
   .venv/bin/python train/export_adapter.py --sampler-path tinker://...
   .venv/bin/python train/export_adapter.py --skip-gguf     # stop after merged HF model
 
-Needs: git, cmake (brew install cmake) for llama.cpp quantize. ~10 GB free disk.
+Needs: git, cmake (brew install cmake) for llama.cpp quantize. Peaks at ~20 GB disk, ends at ~3 GB.
 """
 from __future__ import annotations
 
@@ -34,6 +34,7 @@ def main():
     ap.add_argument("--quant", default="Q4_K_M")
     ap.add_argument("--skip-gguf", action="store_true")
     ap.add_argument("--ollama-name", default="kharcha")
+    ap.add_argument("--keep-intermediates", action="store_true")
     args = ap.parse_args()
 
     sampler_path = args.sampler_path
@@ -88,6 +89,11 @@ def main():
     q = OUT / f"kharcha-{args.quant.lower()}.gguf"
     if not q.exists():
         sh([quant_bin, str(f16), str(q), args.quant])
+    if not args.keep_intermediates:
+        # disk hygiene on a 16 GB laptop: merged HF (~8 GB) and f16 GGUF (~8 GB) are rebuildable
+        shutil.rmtree(merged_dir, ignore_errors=True)
+        f16.unlink(missing_ok=True)
+        print("removed merged_hf/ and f16 gguf (use --keep-intermediates to keep)")
 
     print("5/5 registering with Ollama")
     modelfile = ROOT / "Modelfile"
