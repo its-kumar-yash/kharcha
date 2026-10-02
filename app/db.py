@@ -39,7 +39,9 @@ def insert(raw_text: str, label: dict, backend: str, latency_ms: int) -> dict:
                 label.get("category"), backend, latency_ms,
             ),
         )
-        return get(cur.lastrowid)
+        conn.commit()
+        row = conn.execute("SELECT * FROM entries WHERE id=?", (cur.lastrowid,)).fetchone()
+        return dict(row)
 
 
 def get(entry_id: int) -> dict:
@@ -51,6 +53,7 @@ def get(entry_id: int) -> dict:
 def set_category(entry_id: int, category: str) -> dict:
     with connect() as conn:
         conn.execute("UPDATE entries SET category=?, corrected=1 WHERE id=?", (category, entry_id))
+        conn.commit()
     return get(entry_id)
 
 
