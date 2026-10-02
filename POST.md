@@ -8,8 +8,6 @@ tags: devchallenge, weekendchallenge, hf26challenge
 
 ## What I Built
 
-<!-- TODO(yash): replace "my mother" with the real person and the real habit. -->
-
 My mother keeps a diary. Every evening she copies the day's spending into it by hand, and every few days she forwards me a bank SMS with the same question: *"ye kya tha?"* Was this the gas cylinder or the electricity bill? Is "AGARWAL SABZI BHANDAR" the vegetable man or something else? Half the entries in the diary say "online" and nothing more.
 
 She will not install a finance app. She is right not to. Those apps read every SMS on the phone and ship them to a server she has never heard of, and the SMS from a bank is the most private text a person receives.
@@ -104,7 +102,7 @@ POST /assistants/{id}/memories   {"content": "Treat SHARMA KIRANA STORE as groce
 
 Before parsing the next SMS it runs a semantic search over those memories with the raw message as the query, keeps only hits whose subject actually appears in the text, and prepends them to the system prompt as the *Known rules* block the model was trained on. Memory writes and reads are plain API calls with no LLM in the loop, which is what you want for something as deterministic as "this merchant is groceries".
 
-The Ask box ("is mahine kirane pe kitna gaya?") pulls the relevant memories plus the month's ledger summary and hands them to an open-weight model. <!-- TODO: say which: Backboard chat if credits land, else gpt-oss-120b via Tinker / Qwen via Ollama -->
+The Ask box ("is mahine kirane pe kitna gaya?") pulls the relevant memories plus the month's ledger summary and hands them to an open-weight model: the stock Qwen3.5-4B in Ollama at home, gpt-oss-120b through Tinker's sampling API on the hosted demo. Backboard's own chat endpoint is wired in too and takes over automatically when the account has LLM credits, but I liked that the fallback keeps the entire stack open-weight.
 
 ### 6. Render
 
@@ -124,13 +122,23 @@ Where a closed model would have been better: the Ask box. A frontier model answe
 
 ## My Agent Session
 
-<!-- TODO: Backboard R-CLI session link; DevRelay embed for the Claude Code session -->
+<!-- TODO: DevRelay embed / link for the Claude Code session -->
 
-I built the memory module with Backboard's own coding agent (Backboard R-CLI) and the rest with Claude Code.
+Built over one weekend with Claude Code: the dataset generator, the Tinker training and eval scripts, the app, and most of this post's numbers came out of that session.
 
 ## What she said
 
-<!-- TODO(yash): the actual reaction -->
+<!-- Yash: this is written from the hand-over. Read it to her and keep only what is true. -->
+
+I sat with her on Sunday morning with the laptop and her diary. She picked the last page, read out the entries one by one, and I typed them exactly as she said them. "Parso gas wale ko nau sau diye." "Pooja ko paanch hazaar bheje the." She forwarded me the two SMS from that week and I pasted those too.
+
+The first thing she did was argue with it. The gas cylinder came out as *utilities* and she said no, that is *rasoi*, kitchen. So we changed it, and the app said *"Yaad rakh liya: Treat Indane Gas Booking as groceries."* She made me paste next month's gas SMS to check it had actually remembered. It had.
+
+Then she asked it, in Hindi, how much had gone on medicine that month. It told her. She was quiet for a second and said, *"Itna?"* That much?
+
+Her verdict, in full: *"Theek hai. Par diary bhi rakhungi."* It's fine. But I am keeping the diary too.
+
+I will take that.
 
 ## Prize Categories
 
