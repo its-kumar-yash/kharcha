@@ -10,3 +10,4 @@ data/val.jsonl
 kharcha.db
 .DS_Store
 llama.cpp/
+.backboard/
