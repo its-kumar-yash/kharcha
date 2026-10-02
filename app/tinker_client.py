@@ -8,6 +8,32 @@ from __future__ import annotations
 
 import os
 import re
+import threading
+
+_lock = threading.Lock()
+_service = None
+_tokenizers: dict[str, object] = {}
+
+
+def service():
+    """One ServiceClient per process (each one holds HTTP pools; Render free has 512 MB)."""
+    global _service
+    with _lock:
+        if _service is None:
+            import tinker
+            _service = tinker.ServiceClient()
+        return _service
+
+
+def tokenizer(name: str):
+    """Tokenizers are cached per model; Qwen3.5 variants share one vocabulary so we alias them."""
+    key = "Qwen/Qwen3.5-4B" if name.lower().startswith("qwen/qwen3.5") else name
+    with _lock:
+        if key not in _tokenizers:
+            from transformers import AutoTokenizer
+            _tokenizers[key] = AutoTokenizer.from_pretrained(os.environ.get("TOKENIZER_OVERRIDE") or key)
+        return _tokenizers[key]
+
 
 STOP_TOKENS = {
     "qwen": ["<|im_end|>", "<|endoftext|>"],
@@ -19,12 +45,11 @@ class TinkerSampler:
     def __init__(self, *, base_model: str | None = None, model_path: str | None = None,
                  max_tokens: int = 200, temperature: float = 0.0):
         import tinker
-        from transformers import AutoTokenizer
 
-        self.service = tinker.ServiceClient()
+        self.service = service()
         self.client = self.service.create_sampling_client(base_model=base_model, model_path=model_path)
         self.base_model = base_model or self.client.get_base_model()
-        self.tok = AutoTokenizer.from_pretrained(os.environ.get("TOKENIZER_OVERRIDE") or self.base_model)
+        self.tok = tokenizer(self.base_model)
         family = "gpt-oss" if "gpt-oss" in self.base_model.lower() else "qwen"
         stop_ids = [i for i in (self.tok.convert_tokens_to_ids(t) for t in STOP_TOKENS[family]) if isinstance(i, int) and i >= 0]
         self.template_kwargs = {"enable_thinking": False} if family == "qwen" else {"reasoning_effort": "low"}

@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import logging
 import os
+import threading
 
 import requests
 
@@ -41,7 +42,7 @@ class TinkerChat:
     def __init__(self):
         from app.tinker_client import TinkerSampler
 
-        self.model = os.environ.get("TINKER_CHAT_MODEL", "openai/gpt-oss-120b")
+        self.model = os.environ.get("TINKER_CHAT_MODEL", "Qwen/Qwen3.5-9B")
         self.sampler = TinkerSampler(base_model=self.model, max_tokens=400, temperature=0.3)
 
     def complete(self, system: str, user: str) -> str:
@@ -52,15 +53,17 @@ class Asker:
     def __init__(self, memory: Memory):
         self.memory = memory
         self._fallback = None
+        self._lock = threading.Lock()
         # Backboard chat needs LLM credits on the account. Try once; if it reports no credits,
         # stop paying the round-trip on every question until the process restarts.
         self.backboard_chat = os.environ.get("BACKBOARD_CHAT", "auto").lower() != "off"
 
     def fallback(self):
-        if self._fallback is None:
-            kind = os.environ.get("CHAT_BACKEND") or os.environ.get("PARSER_BACKEND", "ollama")
-            self._fallback = TinkerChat() if kind == "tinker" else OllamaChat()
-            log.info("chat fallback: %s", type(self._fallback).__name__)
+        with self._lock:
+            if self._fallback is None:
+                kind = os.environ.get("CHAT_BACKEND") or os.environ.get("PARSER_BACKEND", "ollama")
+                self._fallback = TinkerChat() if kind == "tinker" else OllamaChat()
+                log.info("chat fallback: %s", type(self._fallback).__name__)
         return self._fallback
 
     def ask(self, question: str, ledger_summary: str, thread_id: str | None = None) -> dict:
