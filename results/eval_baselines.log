@@ -1,0 +1,81 @@
+  prompt = self.renderer.build_generation_prompt(messages[:2])
+Matplotlib is building the font cache; this may take a moment.
+
+=== base on 150 messages
+{
+ "valid": 0.9333333333333333,
+ "amount": 0.8866666666666667,
+ "direction": 0.9266666666666666,
+ "counterparty": 0.76,
+ "channel": 0.6533333333333333,
+ "last4": 0.9333333333333333,
+ "date": 0.72,
+ "category": 0.7133333333333334,
+ "all": 0.28,
+ "p50_ms": 2175.1049590529874,
+ "p95_ms": 2988.1396668497473,
+ "usd_per_1k": 0.3274759,
+ "n": 150,
+ "hinted_category_acc": 0.8571428571428571
+}
+
+=== big on 150 messages
+{
+ "valid": 0.9733333333333334,
+ "amount": 0.9733333333333334,
+ "direction": 0.9733333333333334,
+ "counterparty": 0.8533333333333334,
+ "channel": 0.8066666666666666,
+ "last4": 0.96,
+ "date": 0.76,
+ "category": 0.8066666666666666,
+ "all": 0.4866666666666667,
+ "p50_ms": 2798.461749916896,
+ "p95_ms": 3560.09883293882,
+ "usd_per_1k": 0.3814664,
+ "n": 150,
+ "hinted_category_acc": 0.8571428571428571
+}
+# Kharcha eval: 150 held-out messages
+
+| System | valid | amount | direction | counterparty | channel | last4 | date | category | all | p50 ms | p95 ms | $/1k msgs |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Qwen3.5-4B zero-shot (Tinker) | 93% | 89% | 93% | 76% | 65% | 93% | 72% | 71% | 28% | 2175 | 2988 | $0.327 |
+| gpt-oss-120b zero-shot (Tinker) | 97% | 97% | 97% | 85% | 81% | 96% | 76% | 81% | 49% | 2798 | 3560 | $0.381 |
+
+`all` = every field exact. `$/1k` uses Tinker sampling prices; Ollama is local so marginal cost is zero.
+
+## Category accuracy on messages that carried a user hint (Backboard memory)
+- Qwen3.5-4B zero-shot (Tinker): 86%
+- gpt-oss-120b zero-shot (Tinker): 86%
+
+## All-fields accuracy by template
+| template | base | big |
+|---|---|---|
+| atm_a | 0% | 0% |
+| atm_b | 0% | 0% |
+| autopay | 56% | 56% |
+| axis_upi | 20% | 20% |
+| cred | 14% | 100% |
+| emi | 0% | 80% |
+| gpay | 83% | 100% |
+| hdfc_card | 83% | 100% |
+| hdfc_upi | 25% | 25% |
+| icici_card | 100% | 50% |
+| icici_upi | 0% | 17% |
+| imps_credit_salary | 0% | 0% |
+| kotak_upi | 17% | 50% |
+| neft_salary | 75% | 50% |
+| p2p_credit | 25% | 75% |
+| p2p_imps | 100% | 100% |
+| p2p_upi | 0% | 0% |
+| paytm | 100% | 100% |
+| phonepe | 0% | 0% |
+| pnb_upi | 40% | 60% |
+| rent_transfer | 25% | 0% |
+| sbi_card | 40% | 100% |
+| sbi_upi | 33% | 67% |
+| voice_atm | 0% | 0% |
+| voice_family | 0% | 57% |
+| voice_merchant | 0% | 17% |
+chart -> /Users/yashkumar/Desktop/Project/kharcha/out/results.png

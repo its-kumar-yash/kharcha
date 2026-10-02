@@ -1,0 +1,2956 @@
+[
+  {
+    "text": "Sent Rs.1011.00 From HDFC Bank A/C *6978 To INDIAN OIL PETROL PUMP On 18/09/26 Ref 700531693222 Not You? Call 18002586161/SMS BLOCK UPI to 7308080808",
+    "gold": {
+      "direction": "debit",
+      "amount": 1011.0,
+      "currency": "INR",
+      "counterparty": "INDIAN OIL PETROL PUMP",
+      "channel": "upi",
+      "account_last4": "6978",
+      "date": "2026-09-18",
+      "category": "transport"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 1011.0,
+        "currency": "INR",
+        "counterparty": "INDIAN OIL PETROL PUMP",
+        "channel": "imps",
+        "account_last4": "6978",
+        "date": "2026-09-18",
+        "category": "other"
+      },
+      "ms": 3297.6010830607265,
+      "p": 293,
+      "c": 77
+    }
+  },
+  {
+    "text": "Thanks for using HDFC Bank Card x5946 for Rs 4017.00 at DMART on 22-07-2026 20:18:40. Avl bal: Rs 55,975.32",
+    "gold": {
+      "direction": "debit",
+      "amount": 4017.0,
+      "currency": "INR",
+      "counterparty": "DMART",
+      "channel": "card",
+      "account_last4": "5946",
+      "date": "2026-07-22",
+      "category": "groceries"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 4017.0,
+        "currency": "INR",
+        "counterparty": "DMART",
+        "channel": "card",
+        "account_last4": "5946",
+        "date": "2026-07-22",
+        "category": "shopping"
+      },
+      "ms": 3297.454708022997,
+      "p": 267,
+      "c": 72
+    }
+  },
+  {
+    "text": "Rs 1711.00 debited from SBI Bank A/c XX2918 for CROMA via UPI Autopay on 09-09-26. UPI Ref 254969835792. To cancel mandate visit your UPI app.",
+    "gold": {
+      "direction": "debit",
+      "amount": 1711.0,
+      "currency": "INR",
+      "counterparty": "CROMA",
+      "channel": "upi",
+      "account_last4": "2918",
+      "date": "2026-09-09",
+      "category": "shopping"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 1711.0,
+        "currency": "INR",
+        "counterparty": "CROMA",
+        "channel": "upi",
+        "account_last4": "2918",
+        "date": "2026-09-09",
+        "category": "subscriptions"
+      },
+      "ms": 3271.2853748816997,
+      "p": 274,
+      "c": 72
+    }
+  },
+  {
+    "text": "Dear UPI user A/C X6514 debited by 5091 on date 19Sep26 trf to JIO RECHARGE Refno 149042329897. If not u? call 1800111109. -SBI",
+    "gold": {
+      "direction": "debit",
+      "amount": 5091.0,
+      "currency": "INR",
+      "counterparty": "JIO RECHARGE",
+      "channel": "upi",
+      "account_last4": "6514",
+      "date": "2026-09-19",
+      "category": "utilities"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 5091,
+        "currency": "INR",
+        "counterparty": "JIO RECHARGE",
+        "channel": "upi",
+        "account_last4": "6514",
+        "date": "2026-09-19",
+        "category": "other"
+      },
+      "ms": 3296.11474997364,
+      "p": 276,
+      "c": 72
+    }
+  },
+  {
+    "text": "paanch hazaar rupaye bank se nikale",
+    "gold": {
+      "direction": "debit",
+      "amount": 5000.0,
+      "currency": "INR",
+      "counterparty": "ATM",
+      "channel": "atm",
+      "account_last4": null,
+      "date": null,
+      "category": "cash_withdrawal"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 5000,
+        "currency": "INR",
+        "counterparty": null,
+        "channel": "atm",
+        "account_last4": null,
+        "date": null,
+        "category": "cash_withdrawal"
+      },
+      "ms": 3303.876542020589,
+      "p": 215,
+      "c": 57
+    }
+  },
+  {
+    "text": "Sent Rs.28600.00 From ICICI Bank A/C *5825 To MRS KAVITA LANDLORD On 31/07/26 Ref 537990751163 Note: house rent",
+    "gold": {
+      "direction": "debit",
+      "amount": 28600.0,
+      "currency": "INR",
+      "counterparty": "MRS KAVITA LANDLORD",
+      "channel": "upi",
+      "account_last4": "5825",
+      "date": "2026-07-31",
+      "category": "rent_emi"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 28600.0,
+        "currency": "INR",
+        "counterparty": "MRS KAVITA LANDLORD",
+        "channel": "imps",
+        "account_last4": "5825",
+        "date": "2026-07-31",
+        "category": "rent_emi"
+      },
+      "ms": 3288.129499880597,
+      "p": 264,
+      "c": 80
+    }
+  },
+  {
+    "text": "Sent Rs.21291.00 from Kotak Bank AC X8758 to 1mg@icici on 01-07-26.UPI Ref 549563968174. Not you, kotak.com/fraud",
+    "gold": {
+      "direction": "debit",
+      "amount": 21291.0,
+      "currency": "INR",
+      "counterparty": "1mg@icici",
+      "channel": "upi",
+      "account_last4": "8758",
+      "date": "2026-07-01",
+      "category": "medical"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 21291.0,
+        "currency": "INR",
+        "counterparty": "1mg@icici",
+        "channel": "upi",
+        "account_last4": "8758",
+        "date": "2026-07-01",
+        "category": "shopping"
+      },
+      "ms": 2429.423708934337,
+      "p": 267,
+      "c": 75
+    }
+  },
+  {
+    "text": "₹99 paid to YouTube Premium · Debited from HDFC Bank ****0329 · Txn ID T2609106832677131",
+    "gold": {
+      "direction": "debit",
+      "amount": 99.0,
+      "currency": "INR",
+      "counterparty": "YouTube Premium",
+      "channel": "upi",
+      "account_last4": "0329",
+      "date": "2026-09-10",
+      "category": "subscriptions"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 99,
+        "currency": "INR",
+        "counterparty": "YouTube Premium",
+        "channel": "upi",
+        "account_last4": "0329",
+        "date": "2024-10-06",
+        "category": "subscriptions"
+      },
+      "ms": 2173.2307500205934,
+      "p": 246,
+      "c": 67
+    }
+  },
+  {
+    "text": "chai nashta ka paanch sau de diye",
+    "gold": {
+      "direction": "debit",
+      "amount": 500.0,
+      "currency": "INR",
+      "counterparty": "chai nashta",
+      "channel": "cash",
+      "account_last4": null,
+      "date": null,
+      "category": "food_delivery"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 500,
+        "currency": "INR",
+        "counterparty": null,
+        "channel": "unknown",
+        "account_last4": null,
+        "date": null,
+        "category": "food_delivery"
+      },
+      "ms": 2169.2272080108523,
+      "p": 214,
+      "c": 53
+    }
+  },
+  {
+    "text": "Payment of ₹3,006 to FASTag Recharge successful via CRED UPI from SBI Bank XX4239. Ref 440465135639",
+    "gold": {
+      "direction": "debit",
+      "amount": 3006.0,
+      "currency": "INR",
+      "counterparty": "FASTag Recharge",
+      "channel": "upi",
+      "account_last4": "4239",
+      "date": null,
+      "category": "transport"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 3006,
+        "currency": "INR",
+        "counterparty": "FASTag",
+        "channel": "upi",
+        "account_last4": "4239",
+        "date": "null",
+        "category": "transport"
+      },
+      "ms": 2791.02124995552,
+      "p": 248,
+      "c": 60
+    }
+  },
+  {
+    "text": "Payment of ₹3,125.55 to Mother Dairy Booth successful via CRED UPI from AXIS Bank XX4083. Ref 881032826263",
+    "gold": {
+      "direction": "debit",
+      "amount": 3125.55,
+      "currency": "INR",
+      "counterparty": "Mother Dairy Booth",
+      "channel": "upi",
+      "account_last4": "4083",
+      "date": null,
+      "category": "groceries"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 3125.55,
+        "currency": "INR",
+        "counterparty": "Mother Dairy Booth",
+        "channel": "upi",
+        "account_last4": "4083",
+        "date": "null",
+        "category": "groceries"
+      },
+      "ms": 2424.2337921168655,
+      "p": 249,
+      "c": 65
+    }
+  },
+  {
+    "text": "INR 27563.05 debited A/c no. XX7622 05-07-26 09:35:34 UPI/P2M/377670777249/NYKAA Not you? SMS BLOCKUPI Cust ID to 919951860002 - Axis Bank",
+    "gold": {
+      "direction": "debit",
+      "amount": 27563.05,
+      "currency": "INR",
+      "counterparty": "NYKAA",
+      "channel": "upi",
+      "account_last4": "7622",
+      "date": "2026-07-05",
+      "category": "shopping"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 27563.05,
+        "currency": "INR",
+        "counterparty": "NYKAA",
+        "channel": "upi",
+        "account_last4": "7622",
+        "date": "2026-05-07",
+        "category": "other"
+      },
+      "ms": 2988.1396668497473,
+      "p": 292,
+      "c": 74
+    }
+  },
+  {
+    "text": "aaj Papa ne das hazaar bheje",
+    "gold": {
+      "direction": "credit",
+      "amount": 10000.0,
+      "currency": "INR",
+      "counterparty": "Papa",
+      "channel": "upi",
+      "account_last4": null,
+      "date": "2026-10-02",
+      "category": "family_transfer"
+    },
+    "out": {
+      "pred": {
+        "direction": "credit",
+        "amount": 1000,
+        "currency": "INR",
+        "counterparty": "Papa",
+        "channel": "unknown",
+        "account_last4": null,
+        "date": "2023-10-27",
+        "category": "family_transfer"
+      },
+      "ms": 1925.7189580239356,
+      "p": 215,
+      "c": 66
+    }
+  },
+  {
+    "text": "Sent Rs.149.00 from Kotak Bank AC X0510 to spotify@ybl on 25-08-26.UPI Ref 068642981630. Not you, kotak.com/fraud",
+    "gold": {
+      "direction": "debit",
+      "amount": 149.0,
+      "currency": "INR",
+      "counterparty": "spotify@ybl",
+      "channel": "upi",
+      "account_last4": "0510",
+      "date": "2026-08-25",
+      "category": "subscriptions"
+    },
+    "out": {
+      "error": "invalid fields ['account_last4']: {'direction': 'debit', 'amount': 149.0, 'currency': 'INR', 'counterparty': 'spotify@ybl', 'channel': 'upi', 'account_last4': '10', 'date': '2026-08-25', 'category': '",
+      "ms": 1902.9890408273786,
+      "pred": null,
+      "p": 263,
+      "c": 70,
+      "raw": "{\"direction\": \"debit\", \"amount\": 149.0, \"currency\": \"INR\", \"counterparty\": \"spotify@ybl\", \"channel\": \"upi\", \"account_last4\": \"10\", \"date\": \"2026-08-25\", \"category\": \"subscriptions\"}<|im_end|>"
+    }
+  },
+  {
+    "text": "Rs 3,449.00 credited to A/c XX7566 on 06-06-26 from ROHIT SAINI via UPI Ref 256465477637. Avl Bal Rs 81,118.87 -ICICI",
+    "gold": {
+      "direction": "credit",
+      "amount": 3449.0,
+      "currency": "INR",
+      "counterparty": "ROHIT SAINI",
+      "channel": "upi",
+      "account_last4": "7566",
+      "date": "2026-06-06",
+      "category": "other"
+    },
+    "out": {
+      "pred": {
+        "direction": "credit",
+        "amount": 3449.0,
+        "currency": "INR",
+        "counterparty": "ROHIT SAINI",
+        "channel": "upi",
+        "account_last4": "7566",
+        "date": "2026-06-06",
+        "category": "family_transfer"
+      },
+      "ms": 1924.3849590420723,
+      "p": 276,
+      "c": 76
+    }
+  },
+  {
+    "text": "Payment of ₹2,321 to Gupta General Store successful via CRED UPI from HDFC Bank XX5604. Ref 683968450468",
+    "gold": {
+      "direction": "debit",
+      "amount": 2321.0,
+      "currency": "INR",
+      "counterparty": "Gupta General Store",
+      "channel": "upi",
+      "account_last4": "5604",
+      "date": null,
+      "category": "groceries"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 2321,
+        "currency": "INR",
+        "counterparty": "Gupta General Store",
+        "channel": "upi",
+        "account_last4": "5604",
+        "date": "null",
+        "category": "shopping"
+      },
+      "ms": 2388.5002080351114,
+      "p": 247,
+      "c": 63
+    }
+  },
+  {
+    "text": "You paid ₹2187 to DMart using Google Pay. UPI transaction ID 827752349133",
+    "gold": {
+      "direction": "debit",
+      "amount": 2187.0,
+      "currency": "INR",
+      "counterparty": "DMart",
+      "channel": "upi",
+      "account_last4": null,
+      "date": null,
+      "category": "groceries"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 2187,
+        "currency": "INR",
+        "counterparty": "DMart",
+        "channel": "upi",
+        "account_last4": null,
+        "date": null,
+        "category": "shopping"
+      },
+      "ms": 2510.0829999428242,
+      "p": 236,
+      "c": 55
+    }
+  },
+  {
+    "text": "Uber ka do hazaar pay kiye parso",
+    "gold": {
+      "direction": "debit",
+      "amount": 2000.0,
+      "currency": "INR",
+      "counterparty": "Uber",
+      "channel": "unknown",
+      "account_last4": null,
+      "date": "2026-09-30",
+      "category": "transport"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 2000,
+        "currency": "INR",
+        "counterparty": "Uber",
+        "channel": "upi",
+        "account_last4": null,
+        "date": null,
+        "category": "transport"
+      },
+      "ms": 2288.4469171985984,
+      "p": 215,
+      "c": 54
+    }
+  },
+  {
+    "text": "parso Spotify ko hazaar online kiye",
+    "gold": {
+      "direction": "debit",
+      "amount": 1000.0,
+      "currency": "INR",
+      "counterparty": "Spotify",
+      "channel": "upi",
+      "account_last4": null,
+      "date": "2026-09-30",
+      "category": "subscriptions"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 1000,
+        "currency": "INR",
+        "counterparty": "Spotify",
+        "channel": "upi",
+        "account_last4": null,
+        "date": null,
+        "category": "subscriptions"
+      },
+      "ms": 2271.756667178124,
+      "p": 214,
+      "c": 55
+    }
+  },
+  {
+    "text": "Rs 38,100.00 debited from A/c XX1859 towards HDFC Home Loan EMI on 05-08-26. Ref 3878036805. -HDFC Bank",
+    "gold": {
+      "direction": "debit",
+      "amount": 38100.0,
+      "currency": "INR",
+      "counterparty": "HDFC Home Loan EMI",
+      "channel": "unknown",
+      "account_last4": "1859",
+      "date": "2026-08-05",
+      "category": "rent_emi"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 38100.0,
+        "currency": "INR",
+        "counterparty": "HDFC Home Loan EMI",
+        "channel": "imps",
+        "account_last4": "1859",
+        "date": "2026-08-05",
+        "category": "rent_emi"
+      },
+      "ms": 2271.6351670678705,
+      "p": 262,
+      "c": 79
+    }
+  },
+  {
+    "text": "do hazaar rupaye gift pay kiye",
+    "gold": {
+      "direction": "debit",
+      "amount": 2000.0,
+      "currency": "INR",
+      "counterparty": "gift",
+      "channel": "unknown",
+      "account_last4": null,
+      "date": null,
+      "category": "shopping"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 1000,
+        "currency": "INR",
+        "counterparty": "gift pay",
+        "channel": "upi",
+        "account_last4": null,
+        "date": null,
+        "category": "other"
+      },
+      "ms": 2268.1117500178516,
+      "p": 214,
+      "c": 55
+    }
+  },
+  {
+    "text": "Sent Rs.7600.00 From PNB Bank A/C *1600 To MRS KAVITA LANDLORD On 03/08/26 Ref 413690560872 Note: house rent",
+    "gold": {
+      "direction": "debit",
+      "amount": 7600.0,
+      "currency": "INR",
+      "counterparty": "MRS KAVITA LANDLORD",
+      "channel": "upi",
+      "account_last4": "1600",
+      "date": "2026-08-03",
+      "category": "rent_emi"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 7600.0,
+        "currency": "INR",
+        "counterparty": "MRS KAVITA LANDLORD",
+        "channel": "imps",
+        "account_last4": "1600",
+        "date": "2026-08-03",
+        "category": "rent_emi"
+      },
+      "ms": 2236.322624841705,
+      "p": 263,
+      "c": 79
+    }
+  },
+  {
+    "text": "jooti ke 1200 lage kal",
+    "gold": {
+      "direction": "debit",
+      "amount": 1200.0,
+      "currency": "INR",
+      "counterparty": "jooti",
+      "channel": "unknown",
+      "account_last4": null,
+      "date": "2026-10-01",
+      "category": "shopping"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 1200,
+        "currency": "INR",
+        "counterparty": null,
+        "channel": "unknown",
+        "account_last4": null,
+        "date": "2023-10-20",
+        "category": "shopping"
+      },
+      "ms": 2818.1640829425305,
+      "p": 216,
+      "c": 63
+    }
+  },
+  {
+    "text": "Spotify ke 150 lage",
+    "gold": {
+      "direction": "debit",
+      "amount": 150.0,
+      "currency": "INR",
+      "counterparty": "Spotify",
+      "channel": "unknown",
+      "account_last4": null,
+      "date": null,
+      "category": "subscriptions"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 150,
+        "currency": "INR",
+        "counterparty": "Spotify",
+        "channel": "upi",
+        "account_last4": null,
+        "date": null,
+        "category": "subscriptions"
+      },
+      "ms": 2783.5120409727097,
+      "p": 213,
+      "c": 54
+    }
+  },
+  {
+    "text": "ECS/NACH debit of Rs.23300.00 for SBI Car Loan EMI from A/c X7877 on 31/07/2026 processed. -PNB",
+    "gold": {
+      "direction": "debit",
+      "amount": 23300.0,
+      "currency": "INR",
+      "counterparty": "SBI Car Loan EMI",
+      "channel": "unknown",
+      "account_last4": "7877",
+      "date": "2026-07-31",
+      "category": "rent_emi"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 23300.0,
+        "currency": "INR",
+        "counterparty": "SBI Car Loan EMI",
+        "channel": "imps",
+        "account_last4": "7877",
+        "date": "2026-07-31",
+        "category": "rent_emi"
+      },
+      "ms": 2751.7585000023246,
+      "p": 253,
+      "c": 78
+    }
+  },
+  {
+    "text": "₹309.86 paid to BSES Rajdhani Power · Debited from PNB Bank ****0086 · Txn ID T2608207024712373",
+    "gold": {
+      "direction": "debit",
+      "amount": 309.86,
+      "currency": "INR",
+      "counterparty": "BSES Rajdhani Power",
+      "channel": "upi",
+      "account_last4": "0086",
+      "date": "2026-08-20",
+      "category": "utilities"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 309.86,
+        "currency": "INR",
+        "counterparty": "BSES Rajdhani Power",
+        "channel": "imps",
+        "account_last4": "0086",
+        "date": "2024-08-20",
+        "category": "utilities"
+      },
+      "ms": 2350.4518328700215,
+      "p": 254,
+      "c": 75
+    }
+  },
+  {
+    "text": "paani ka bill ka 3000 bhare aaj",
+    "gold": {
+      "direction": "debit",
+      "amount": 3000.0,
+      "currency": "INR",
+      "counterparty": "paani ka bill",
+      "channel": "unknown",
+      "account_last4": null,
+      "date": "2026-10-02",
+      "category": "utilities"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 3000,
+        "currency": "INR",
+        "counterparty": null,
+        "channel": "imps",
+        "account_last4": null,
+        "date": "2023-10-27",
+        "category": "utilities"
+      },
+      "ms": 1746.7279590200633,
+      "p": 219,
+      "c": 63
+    }
+  },
+  {
+    "text": "Rs.3013.00 spent on your SBI Credit Card ending 5488 at LIC PREMIUM on 20/08/26. Trxn. not done by you? Report at https://sbicard.com/Dispute",
+    "gold": {
+      "direction": "debit",
+      "amount": 3013.0,
+      "currency": "INR",
+      "counterparty": "LIC PREMIUM",
+      "channel": "card",
+      "account_last4": "5488",
+      "date": "2026-08-20",
+      "category": "other"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 3013.0,
+        "currency": "INR",
+        "counterparty": "LIC PREMIUM",
+        "channel": "card",
+        "account_last4": "5488",
+        "date": "2026-08-20",
+        "category": "shopping"
+      },
+      "ms": 2335.984791861847,
+      "p": 260,
+      "c": 71
+    }
+  },
+  {
+    "text": "2500 rupaye Flipkart bhare",
+    "gold": {
+      "direction": "debit",
+      "amount": 2500.0,
+      "currency": "INR",
+      "counterparty": "Flipkart",
+      "channel": "unknown",
+      "account_last4": null,
+      "date": null,
+      "category": "shopping"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 2500,
+        "currency": "INR",
+        "counterparty": "Flipkart",
+        "channel": "upi",
+        "account_last4": null,
+        "date": null,
+        "category": "shopping"
+      },
+      "ms": 2522.361666895449,
+      "p": 215,
+      "c": 55
+    }
+  },
+  {
+    "text": "₹499 paid to YouTube Premium · Debited from KOTAK Bank ****1867 · Txn ID T2608240184355273",
+    "gold": {
+      "direction": "debit",
+      "amount": 499.0,
+      "currency": "INR",
+      "counterparty": "YouTube Premium",
+      "channel": "upi",
+      "account_last4": "1867",
+      "date": "2026-08-24",
+      "category": "subscriptions"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 499,
+        "currency": "INR",
+        "counterparty": "YouTube Premium",
+        "channel": "upi",
+        "account_last4": "1867",
+        "date": "2024-01-08",
+        "category": "subscriptions"
+      },
+      "ms": 1773.6421660520136,
+      "p": 248,
+      "c": 68
+    }
+  },
+  {
+    "text": "Sent Rs.6058.00 From KOTAK Bank A/C *6298 To DEEPAK YADAV On 25/08/26 Ref 372135963118 Not You? Call 18002586161",
+    "gold": {
+      "direction": "debit",
+      "amount": 6058.0,
+      "currency": "INR",
+      "counterparty": "DEEPAK YADAV",
+      "channel": "upi",
+      "account_last4": "6298",
+      "date": "2026-08-25",
+      "category": "other"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 6058.0,
+        "currency": "INR",
+        "counterparty": "DEEPAK YADAV",
+        "channel": "imps",
+        "account_last4": "6298",
+        "date": "2026-08-25",
+        "category": "family_transfer"
+      },
+      "ms": 2127.9890830628574,
+      "p": 275,
+      "c": 77
+    }
+  },
+  {
+    "text": "ECS/NACH debit of Rs.17000.00 for Bajaj Finance EMI from A/c X6748 on 25/07/2026 processed. -KOTAK",
+    "gold": {
+      "direction": "debit",
+      "amount": 17000.0,
+      "currency": "INR",
+      "counterparty": "Bajaj Finance EMI",
+      "channel": "unknown",
+      "account_last4": "6748",
+      "date": "2026-07-25",
+      "category": "rent_emi"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 17000.0,
+        "currency": "INR",
+        "counterparty": "Bajaj Finance",
+        "channel": "imps",
+        "account_last4": "6748",
+        "date": "2026-07-25",
+        "category": "rent_emi"
+      },
+      "ms": 2136.8630840443075,
+      "p": 253,
+      "c": 76
+    }
+  },
+  {
+    "text": "Your A/c XX9763 debited Rs. 4146.00 on 25-09-2026 to VPA drmehta@okaxis. UPI Ref 814745598647. Not you? Call 18001802222 -PNB",
+    "gold": {
+      "direction": "debit",
+      "amount": 4146.0,
+      "currency": "INR",
+      "counterparty": "drmehta@okaxis",
+      "channel": "upi",
+      "account_last4": "9763",
+      "date": "2026-09-25",
+      "category": "medical"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 4146.0,
+        "currency": "INR",
+        "counterparty": "drmehta@okaxis",
+        "channel": "upi",
+        "account_last4": "9763",
+        "date": "2026-09-25",
+        "category": "other"
+      },
+      "ms": 2883.555666077882,
+      "p": 283,
+      "c": 75
+    }
+  },
+  {
+    "text": "Rs.15513.23 spent on your SBI Credit Card ending 2123 at TATA 1MG on 29/09/26. Trxn. not done by you? Report at https://sbicard.com/Dispute",
+    "gold": {
+      "direction": "debit",
+      "amount": 15513.23,
+      "currency": "INR",
+      "counterparty": "TATA 1MG",
+      "channel": "card",
+      "account_last4": "2123",
+      "date": "2026-09-29",
+      "category": "medical"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 15513.23,
+        "currency": "INR",
+        "counterparty": "TATA 1MG",
+        "channel": "card",
+        "account_last4": "2123",
+        "date": "2026-09-29",
+        "category": "shopping"
+      },
+      "ms": 2895.874666981399,
+      "p": 264,
+      "c": 76
+    }
+  },
+  {
+    "text": "Spotify ke 300 lage kal",
+    "gold": {
+      "direction": "debit",
+      "amount": 300.0,
+      "currency": "INR",
+      "counterparty": "Spotify",
+      "channel": "unknown",
+      "account_last4": null,
+      "date": "2026-10-01",
+      "category": "subscriptions"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 300,
+        "currency": "INR",
+        "counterparty": "Spotify",
+        "channel": "upi",
+        "account_last4": null,
+        "date": "2023-10-20",
+        "category": "subscriptions"
+      },
+      "ms": 2892.55249989219,
+      "p": 214,
+      "c": 65
+    }
+  },
+  {
+    "text": "Rs 3484.00 debited from ICICI Bank A/c XX2400 for VODAFONE IDEA via UPI Autopay on 01-09-26. UPI Ref 066081790627. To cancel mandate visit your UPI app.",
+    "gold": {
+      "direction": "debit",
+      "amount": 3484.0,
+      "currency": "INR",
+      "counterparty": "VODAFONE IDEA",
+      "channel": "upi",
+      "account_last4": "2400",
+      "date": "2026-09-01",
+      "category": "utilities"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 3484.0,
+        "currency": "INR",
+        "counterparty": "VODAFONE IDEA",
+        "channel": "upi",
+        "account_last4": "2400",
+        "date": "2026-09-01",
+        "category": "subscriptions"
+      },
+      "ms": 2530.8264158666134,
+      "p": 276,
+      "c": 74
+    }
+  },
+  {
+    "text": "Dear Customer, EMI of INR 29,200.00 for HDFC Home Loan EMI has been successfully debited from your A/c ending 2425 on 20-Jul-26.",
+    "gold": {
+      "direction": "debit",
+      "amount": 29200.0,
+      "currency": "INR",
+      "counterparty": "HDFC Home Loan EMI",
+      "channel": "unknown",
+      "account_last4": "2425",
+      "date": "2026-07-20",
+      "category": "rent_emi"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 29200.0,
+        "currency": "INR",
+        "counterparty": "HDFC Home Loan EMI",
+        "channel": "imps",
+        "account_last4": "2425",
+        "date": "2026-07-20",
+        "category": "rent_emi"
+      },
+      "ms": 2113.2762080524117,
+      "p": 254,
+      "c": 79
+    }
+  },
+  {
+    "text": "ICICI Bank Acct XX536 debited for Rs 54.00 on 04-Jul-26; RELIANCE FRESH credited. UPI:118625723856. Call 18002662 for dispute. SMS BLOCK 536 to 9215676766.",
+    "gold": {
+      "direction": "debit",
+      "amount": 54.0,
+      "currency": "INR",
+      "counterparty": "RELIANCE FRESH",
+      "channel": "upi",
+      "account_last4": null,
+      "date": "2026-07-04",
+      "category": "groceries"
+    },
+    "out": {
+      "error": "invalid fields ['account_last4']: {'direction': 'credit', 'amount': 54.0, 'currency': 'INR', 'counterparty': 'RELIANCE FRESH', 'channel': 'upi', 'account_last4': '536', 'date': '2026-07-04', 'category",
+      "ms": 2112.69324994646,
+      "pred": null,
+      "p": 288,
+      "c": 71,
+      "raw": "{\"direction\": \"credit\", \"amount\": 54.0, \"currency\": \"INR\", \"counterparty\": \"RELIANCE FRESH\", \"channel\": \"upi\", \"account_last4\": \"536\", \"date\": \"2026-07-04\", \"category\": \"shopping\"}<|im_end|>"
+    }
+  },
+  {
+    "text": "Rs 65,500.00 credited to A/c XX0680 on 15-09-26 by KOTAK LIFE INSURANCE SALARY SEP via IMPS Ref 831989974263. -KOTAK Bank",
+    "gold": {
+      "direction": "credit",
+      "amount": 65500.0,
+      "currency": "INR",
+      "counterparty": "KOTAK LIFE INSURANCE",
+      "channel": "imps",
+      "account_last4": "0680",
+      "date": "2026-09-15",
+      "category": "salary_income"
+    },
+    "out": {
+      "pred": {
+        "direction": "credit",
+        "amount": 65500.0,
+        "currency": "INR",
+        "counterparty": "KOTAK LIFE INSURANCE SALARY SEP",
+        "channel": "imps",
+        "account_last4": "0680",
+        "date": "2026-09-15",
+        "category": "salary_income"
+      },
+      "ms": 2324.1580000612885,
+      "p": 269,
+      "c": 81
+    }
+  },
+  {
+    "text": "Rs 3652.00 debited from HDFC Bank A/c XX0598 for DMART via UPI Autopay on 11-08-26. UPI Ref 893846747546. To cancel mandate visit your UPI app.",
+    "gold": {
+      "direction": "debit",
+      "amount": 3652.0,
+      "currency": "INR",
+      "counterparty": "DMART",
+      "channel": "upi",
+      "account_last4": "0598",
+      "date": "2026-08-11",
+      "category": "groceries"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 3652.0,
+        "currency": "INR",
+        "counterparty": "DMART",
+        "channel": "upi",
+        "account_last4": "0598",
+        "date": "2026-08-11",
+        "category": "shopping"
+      },
+      "ms": 2337.820833083242,
+      "p": 273,
+      "c": 71
+    }
+  },
+  {
+    "text": "Rs 1,40,700.00 credited to A/c XX2718 on 06-06-26 by TATA CONSULTANCY SERVICES SALARY JUN via IMPS Ref 208042317820. -HDFC Bank",
+    "gold": {
+      "direction": "credit",
+      "amount": 140700.0,
+      "currency": "INR",
+      "counterparty": "TATA CONSULTANCY SERVICES",
+      "channel": "imps",
+      "account_last4": "2718",
+      "date": "2026-06-06",
+      "category": "salary_income"
+    },
+    "out": {
+      "pred": {
+        "direction": "credit",
+        "amount": 140700.0,
+        "currency": "INR",
+        "counterparty": "TATA CONSULTANCY SERVICES SALARY JUN",
+        "channel": "imps",
+        "account_last4": "2718",
+        "date": "2026-06-06",
+        "category": "salary_income"
+      },
+      "ms": 2331.6714169923216,
+      "p": 270,
+      "c": 81
+    }
+  },
+  {
+    "text": "Chachu ko 20000 rupaye diye aaj",
+    "gold": {
+      "direction": "debit",
+      "amount": 20000.0,
+      "currency": "INR",
+      "counterparty": "Chachu",
+      "channel": "cash",
+      "account_last4": null,
+      "date": "2026-10-02",
+      "category": "family_transfer"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 20000,
+        "currency": "INR",
+        "counterparty": "Chachu",
+        "channel": "unknown",
+        "account_last4": null,
+        "date": "2023-10-27",
+        "category": "family_transfer"
+      },
+      "ms": 2145.3112920280546,
+      "p": 219,
+      "c": 67
+    }
+  },
+  {
+    "text": "ICICI Bank Acct XX555 debited for Rs 30899.16 on 26-Jun-26; MYNTRA credited. UPI:287779447043. Call 18002662 for dispute. SMS BLOCK 555 to 9215676766.",
+    "gold": {
+      "direction": "debit",
+      "amount": 30899.16,
+      "currency": "INR",
+      "counterparty": "MYNTRA",
+      "channel": "upi",
+      "account_last4": null,
+      "date": "2026-06-26",
+      "category": "groceries"
+    },
+    "out": {
+      "error": "invalid fields ['account_last4']: {'direction': 'debit', 'amount': 30899.16, 'currency': 'INR', 'counterparty': 'Myntra', 'channel': 'upi', 'account_last4': '555', 'date': '2026-06-26', 'category': 'g",
+      "ms": 2323.011458152905,
+      "pred": null,
+      "p": 305,
+      "c": 74,
+      "raw": "{\"direction\": \"debit\", \"amount\": 30899.16, \"currency\": \"INR\", \"counterparty\": \"Myntra\", \"channel\": \"upi\", \"account_last4\": \"555\", \"date\": \"2026-06-26\", \"category\": \"groceries\"}<|im_end|>"
+    }
+  },
+  {
+    "text": "₹1,427.85 paid to Sharma Kirana Store · Debited from PNB Bank ****5933 · Txn ID T2607093635239374",
+    "gold": {
+      "direction": "debit",
+      "amount": 1427.85,
+      "currency": "INR",
+      "counterparty": "Sharma Kirana Store",
+      "channel": "upi",
+      "account_last4": "5933",
+      "date": "2026-07-09",
+      "category": "groceries"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 1427.85,
+        "currency": "INR",
+        "counterparty": "Sharma Kirana Store",
+        "channel": "upi",
+        "account_last4": "5933",
+        "date": "2023-10-26",
+        "category": "groceries"
+      },
+      "ms": 2378.928374964744,
+      "p": 254,
+      "c": 76
+    }
+  },
+  {
+    "text": "INR 1120.05 debited A/c no. XX3167 25-06-26 20:45:12 UPI/P2M/739510256340/BLINKIT Not you? SMS BLOCKUPI Cust ID to 919951860002 - Axis Bank",
+    "gold": {
+      "direction": "debit",
+      "amount": 1120.05,
+      "currency": "INR",
+      "counterparty": "BLINKIT",
+      "channel": "upi",
+      "account_last4": "3167",
+      "date": "2026-06-25",
+      "category": "groceries"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 1120.05,
+        "currency": "INR",
+        "counterparty": "BLINKIT",
+        "channel": "upi",
+        "account_last4": "3167",
+        "date": "2026-06-25",
+        "category": "food_delivery"
+      },
+      "ms": 2359.1077921446413,
+      "p": 291,
+      "c": 74
+    }
+  },
+  {
+    "text": "Your A/C XXXXX7144 Credited INR 99,200.00 on 31/08/26 by NEFT from DELHI PUBLIC SCHOOL (Ref 1360754426479009). Avl Bal INR 1,39,622.35 -ICICI",
+    "gold": {
+      "direction": "credit",
+      "amount": 99200.0,
+      "currency": "INR",
+      "counterparty": "DELHI PUBLIC SCHOOL",
+      "channel": "neft",
+      "account_last4": "7144",
+      "date": "2026-08-31",
+      "category": "salary_income"
+    },
+    "out": {
+      "pred": {
+        "direction": "credit",
+        "amount": 99200.0,
+        "currency": "INR",
+        "counterparty": "DELHI PUBLIC SCHOOL",
+        "channel": "neft",
+        "account_last4": "7144",
+        "date": "2026-08-31",
+        "category": "other"
+      },
+      "ms": 2147.7261250838637,
+      "p": 286,
+      "c": 75
+    }
+  },
+  {
+    "text": "₹1,159 paid to Dominos Pizza · Debited from ICICI Bank ****8437 · Txn ID T2608316160493413",
+    "gold": {
+      "direction": "debit",
+      "amount": 1159.0,
+      "currency": "INR",
+      "counterparty": "Dominos Pizza",
+      "channel": "upi",
+      "account_last4": "8437",
+      "date": "2026-08-31",
+      "category": "food_delivery"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 1159,
+        "currency": "INR",
+        "counterparty": "Dominos Pizza",
+        "channel": "upi",
+        "account_last4": "8437",
+        "date": "2024-01-01",
+        "category": "food_delivery"
+      },
+      "ms": 2126.735541038215,
+      "p": 250,
+      "c": 71
+    }
+  },
+  {
+    "text": "INR 3354.94 debited A/c no. XX8729 23-07-26 04:00:35 UPI/P2M/475961172646/BLINKIT Not you? SMS BLOCKUPI Cust ID to 919951860002 - Axis Bank",
+    "gold": {
+      "direction": "debit",
+      "amount": 3354.94,
+      "currency": "INR",
+      "counterparty": "BLINKIT",
+      "channel": "upi",
+      "account_last4": "8729",
+      "date": "2026-07-23",
+      "category": "groceries"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 3354.94,
+        "currency": "INR",
+        "counterparty": "BLINKIT",
+        "channel": "upi",
+        "account_last4": "8729",
+        "date": "2026-07-23",
+        "category": "food_delivery"
+      },
+      "ms": 2176.7067920882255,
+      "p": 291,
+      "c": 74
+    }
+  },
+  {
+    "text": "kal kirane ko 1500 kar diye",
+    "gold": {
+      "direction": "debit",
+      "amount": 1500.0,
+      "currency": "INR",
+      "counterparty": "kirane",
+      "channel": "unknown",
+      "account_last4": null,
+      "date": "2026-10-01",
+      "category": "groceries"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 1500,
+        "currency": "INR",
+        "counterparty": null,
+        "channel": "unknown",
+        "account_last4": null,
+        "date": null,
+        "category": "other"
+      },
+      "ms": 2175.0922091305256,
+      "p": 216,
+      "c": 53
+    }
+  },
+  {
+    "text": "Dear Customer, INR 10,000.00 has been debited from A/c XX7802 for ATM WDL at BANER PUNE on 04-Jun-2026. Not you? Call ICICI immediately.",
+    "gold": {
+      "direction": "debit",
+      "amount": 10000.0,
+      "currency": "INR",
+      "counterparty": "ATM WDL BANER PUNE",
+      "channel": "atm",
+      "account_last4": "7802",
+      "date": "2026-06-04",
+      "category": "cash_withdrawal"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 10000,
+        "currency": "INR",
+        "counterparty": "ATM WDL",
+        "channel": "atm",
+        "account_last4": "7802",
+        "date": "2026-06-04",
+        "category": "cash_withdrawal"
+      },
+      "ms": 2178.587374975905,
+      "p": 260,
+      "c": 76
+    }
+  },
+  {
+    "text": "Rahul beta ko 10 hazaar rupaye diye kal",
+    "gold": {
+      "direction": "debit",
+      "amount": 10000.0,
+      "currency": "INR",
+      "counterparty": "Rahul beta",
+      "channel": "cash",
+      "account_last4": null,
+      "date": "2026-10-01",
+      "category": "family_transfer"
+    },
+    "out": {
+      "pred": {
+        "direction": "credit",
+        "amount": 10000,
+        "currency": "INR",
+        "counterparty": "Rahul",
+        "channel": "unknown",
+        "account_last4": null,
+        "date": "2023-10-27",
+        "category": "family_transfer"
+      },
+      "ms": 2156.6512091085315,
+      "p": 218,
+      "c": 67
+    }
+  },
+  {
+    "text": "ECS/NACH debit of Rs.26800.00 for SBI Car Loan EMI from A/c X4551 on 19/07/2026 processed. -HDFC",
+    "gold": {
+      "direction": "debit",
+      "amount": 26800.0,
+      "currency": "INR",
+      "counterparty": "SBI Car Loan EMI",
+      "channel": "unknown",
+      "account_last4": "4551",
+      "date": "2026-07-19",
+      "category": "rent_emi"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 26800.0,
+        "currency": "INR",
+        "counterparty": "SBI Car Loan EMI",
+        "channel": "imps",
+        "account_last4": "4551",
+        "date": "2026-07-19",
+        "category": "rent_emi"
+      },
+      "ms": 2155.5387917906046,
+      "p": 254,
+      "c": 78
+    }
+  },
+  {
+    "text": "Dear Customer, INR 10,000.00 has been debited from A/c XX7551 for ATM WDL at SECTOR 18 NOIDA on 10-Aug-2026. Not you? Call KOTAK immediately.",
+    "gold": {
+      "direction": "debit",
+      "amount": 10000.0,
+      "currency": "INR",
+      "counterparty": "ATM WDL SECTOR 18 NOIDA",
+      "channel": "atm",
+      "account_last4": "7551",
+      "date": "2026-08-10",
+      "category": "cash_withdrawal"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 10000,
+        "currency": "INR",
+        "counterparty": "ATM WDL",
+        "channel": "atm",
+        "account_last4": "7551",
+        "date": "2026-08-10",
+        "category": "cash_withdrawal"
+      },
+      "ms": 2806.197625119239,
+      "p": 264,
+      "c": 76
+    }
+  },
+  {
+    "text": "Rs 1400.08 debited from ICICI Bank A/c XX5788 for THEOBROMA via UPI Autopay on 06-07-26. UPI Ref 474433039406. To cancel mandate visit your UPI app.",
+    "gold": {
+      "direction": "debit",
+      "amount": 1400.08,
+      "currency": "INR",
+      "counterparty": "THEOBROMA",
+      "channel": "upi",
+      "account_last4": "5788",
+      "date": "2026-07-06",
+      "category": "food_delivery"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 1400.08,
+        "currency": "INR",
+        "counterparty": "THEOBROMA",
+        "channel": "upi",
+        "account_last4": "5788",
+        "date": "2026-07-06",
+        "category": "subscriptions"
+      },
+      "ms": 1759.3589590396732,
+      "p": 275,
+      "c": 74
+    }
+  },
+  {
+    "text": "Dear Customer, EMI of INR 20,300.00 for Bajaj Finance EMI has been successfully debited from your A/c ending 6386 on 01-Sep-26.",
+    "gold": {
+      "direction": "debit",
+      "amount": 20300.0,
+      "currency": "INR",
+      "counterparty": "Bajaj Finance EMI",
+      "channel": "unknown",
+      "account_last4": "6386",
+      "date": "2026-09-01",
+      "category": "rent_emi"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 20300.0,
+        "currency": "INR",
+        "counterparty": "Bajaj Finance",
+        "channel": "imps",
+        "account_last4": "6386",
+        "date": "2026-09-01",
+        "category": "rent_emi"
+      },
+      "ms": 2794.67587498948,
+      "p": 253,
+      "c": 76
+    }
+  },
+  {
+    "text": "Payment of ₹2,140.20 to Swiggy successful via CRED UPI from PNB Bank XX2924. Ref 676122202972",
+    "gold": {
+      "direction": "debit",
+      "amount": 2140.2,
+      "currency": "INR",
+      "counterparty": "Swiggy",
+      "channel": "upi",
+      "account_last4": "2924",
+      "date": null,
+      "category": "food_delivery"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 2140.2,
+        "currency": "INR",
+        "counterparty": "Swiggy",
+        "channel": "upi",
+        "account_last4": "2924",
+        "date": "null",
+        "category": "food_delivery"
+      },
+      "ms": 2172.54229192622,
+      "p": 250,
+      "c": 64
+    }
+  },
+  {
+    "text": "makaan malik ke paanch hazaar lage aaj",
+    "gold": {
+      "direction": "debit",
+      "amount": 5000.0,
+      "currency": "INR",
+      "counterparty": "makaan malik",
+      "channel": "unknown",
+      "account_last4": null,
+      "date": "2026-10-02",
+      "category": "rent_emi"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 5000,
+        "currency": "INR",
+        "counterparty": "makaan malik",
+        "channel": "unknown",
+        "account_last4": null,
+        "date": "2023-10-27",
+        "category": "rent_emi"
+      },
+      "ms": 1785.2104159537703,
+      "p": 217,
+      "c": 69
+    }
+  },
+  {
+    "text": "wifi ka bill ka baarah sau online kiye",
+    "gold": {
+      "direction": "debit",
+      "amount": 1200.0,
+      "currency": "INR",
+      "counterparty": "wifi ka bill",
+      "channel": "upi",
+      "account_last4": null,
+      "date": null,
+      "category": "utilities"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 1100,
+        "currency": "INR",
+        "counterparty": "wifi bill",
+        "channel": "unknown",
+        "account_last4": null,
+        "date": null,
+        "category": "utilities"
+      },
+      "ms": 2166.633415967226,
+      "p": 215,
+      "c": 55
+    }
+  },
+  {
+    "text": "Dear Customer, INR 10,000.00 has been debited from A/c XX6915 for ATM WDL at BANER PUNE on 20-Jun-2026. Not you? Call AXIS immediately.",
+    "gold": {
+      "direction": "debit",
+      "amount": 10000.0,
+      "currency": "INR",
+      "counterparty": "ATM WDL BANER PUNE",
+      "channel": "atm",
+      "account_last4": "6915",
+      "date": "2026-06-20",
+      "category": "cash_withdrawal"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 10000,
+        "currency": "INR",
+        "counterparty": "ATM WDL",
+        "channel": "atm",
+        "account_last4": "6915",
+        "date": "2026-06-20",
+        "category": "cash_withdrawal"
+      },
+      "ms": 2173.400833969936,
+      "p": 259,
+      "c": 76
+    }
+  },
+  {
+    "text": "sabzi wale ko baarah sau de diye",
+    "gold": {
+      "direction": "debit",
+      "amount": 1200.0,
+      "currency": "INR",
+      "counterparty": "sabzi wale",
+      "channel": "cash",
+      "account_last4": null,
+      "date": null,
+      "category": "groceries"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 1100,
+        "currency": "INR",
+        "counterparty": "sabzi wale",
+        "channel": "cash",
+        "account_last4": null,
+        "date": null,
+        "category": "groceries"
+      },
+      "ms": 2402.676417026669,
+      "p": 215,
+      "c": 58
+    }
+  },
+  {
+    "text": "ICICI Bank Acct XX138 debited for Rs 1421.92 on 17-Jun-26; FASTAG RECHARGE credited. UPI:205731758739. Call 18002662 for dispute. SMS BLOCK 138 to 9215676766.",
+    "gold": {
+      "direction": "debit",
+      "amount": 1421.92,
+      "currency": "INR",
+      "counterparty": "FASTAG RECHARGE",
+      "channel": "upi",
+      "account_last4": null,
+      "date": "2026-06-17",
+      "category": "transport"
+    },
+    "out": {
+      "error": "invalid fields ['account_last4']: {'direction': 'debit', 'amount': 1421.92, 'currency': 'INR', 'counterparty': 'FASTAG RECHARGE', 'channel': 'upi', 'account_last4': '138', 'date': '2026-06-17', 'categ",
+      "ms": 2160.83720815368,
+      "pred": null,
+      "p": 290,
+      "c": 74,
+      "raw": "{\"direction\": \"debit\", \"amount\": 1421.92, \"currency\": \"INR\", \"counterparty\": \"FASTAG RECHARGE\", \"channel\": \"upi\", \"account_last4\": \"138\", \"date\": \"2026-06-17\", \"category\": \"transport\"}<|im_end|>"
+    }
+  },
+  {
+    "text": "Payment of ₹1,059.67 to Chai Point successful via CRED UPI from PNB Bank XX4974. Ref 271324300412",
+    "gold": {
+      "direction": "debit",
+      "amount": 1059.67,
+      "currency": "INR",
+      "counterparty": "Chai Point",
+      "channel": "upi",
+      "account_last4": "4974",
+      "date": null,
+      "category": "food_delivery"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 1059.67,
+        "currency": "INR",
+        "counterparty": "Chai Point",
+        "channel": "upi",
+        "account_last4": "4974",
+        "date": "2023-10-27",
+        "category": "food_delivery"
+      },
+      "ms": 2724.4107080623507,
+      "p": 250,
+      "c": 74
+    }
+  },
+  {
+    "text": "kal Amazon pe 10000 kharch hue",
+    "gold": {
+      "direction": "debit",
+      "amount": 10000.0,
+      "currency": "INR",
+      "counterparty": "Amazon",
+      "channel": "cash",
+      "account_last4": null,
+      "date": "2026-10-01",
+      "category": "shopping"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 10000,
+        "currency": "INR",
+        "counterparty": "Amazon",
+        "channel": "upi",
+        "account_last4": null,
+        "date": null,
+        "category": "shopping"
+      },
+      "ms": 2340.4079580213875,
+      "p": 217,
+      "c": 55
+    }
+  },
+  {
+    "text": "Mummy ko 5000 transfer kiye",
+    "gold": {
+      "direction": "debit",
+      "amount": 5000.0,
+      "currency": "INR",
+      "counterparty": "Mummy",
+      "channel": "upi",
+      "account_last4": null,
+      "date": null,
+      "category": "family_transfer"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 5000,
+        "currency": "INR",
+        "counterparty": "Mummy",
+        "channel": "unknown",
+        "account_last4": null,
+        "date": null,
+        "category": "family_transfer"
+      },
+      "ms": 2350.1380828674883,
+      "p": 216,
+      "c": 56
+    }
+  },
+  {
+    "text": "₹2,951.51 paid to Delhi Metro Rail · Debited from HDFC Bank ****6231 · Txn ID T2607102506687458",
+    "gold": {
+      "direction": "debit",
+      "amount": 2951.51,
+      "currency": "INR",
+      "counterparty": "Delhi Metro Rail",
+      "channel": "upi",
+      "account_last4": "6231",
+      "date": "2026-07-10",
+      "category": "transport"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 2951.51,
+        "currency": "INR",
+        "counterparty": "Delhi Metro Rail",
+        "channel": "card",
+        "account_last4": "6231",
+        "date": "2024-10-25",
+        "category": "transport"
+      },
+      "ms": 2346.9758338760585,
+      "p": 253,
+      "c": 74
+    }
+  },
+  {
+    "text": "Sent Rs.568.00 from Kotak Bank AC X8127 to vi@ybl on 26-06-26.UPI Ref 019397086771. Not you, kotak.com/fraud",
+    "gold": {
+      "direction": "debit",
+      "amount": 568.0,
+      "currency": "INR",
+      "counterparty": "vi@ybl",
+      "channel": "upi",
+      "account_last4": "8127",
+      "date": "2026-06-26",
+      "category": "utilities"
+    },
+    "out": {
+      "error": "invalid fields ['account_last4']: {'direction': 'debit', 'amount': 568.0, 'currency': 'INR', 'counterparty': 'vi@ybl', 'channel': 'upi', 'account_last4': '127', 'date': '2026-06-26', 'category': 'othe",
+      "ms": 2349.2692920845,
+      "pred": null,
+      "p": 263,
+      "c": 71,
+      "raw": "{\"direction\": \"debit\", \"amount\": 568.0, \"currency\": \"INR\", \"counterparty\": \"vi@ybl\", \"channel\": \"upi\", \"account_last4\": \"127\", \"date\": \"2026-06-26\", \"category\": \"other\"}<|im_end|>"
+    }
+  },
+  {
+    "text": "Rs.14161.00 spent on your SBI Credit Card ending 6440 at WELLNESS FOREVER on 26/06/26. Trxn. not done by you? Report at https://sbicard.com/Dispute",
+    "gold": {
+      "direction": "debit",
+      "amount": 14161.0,
+      "currency": "INR",
+      "counterparty": "WELLNESS FOREVER",
+      "channel": "card",
+      "account_last4": "6440",
+      "date": "2026-06-26",
+      "category": "medical"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 14161.0,
+        "currency": "INR",
+        "counterparty": "WELLNESS FOREVER",
+        "channel": "card",
+        "account_last4": "6440",
+        "date": "2026-06-26",
+        "category": "shopping"
+      },
+      "ms": 2083.1637501250952,
+      "p": 263,
+      "c": 75
+    }
+  },
+  {
+    "text": "Sent Rs.4065.35 From HDFC Bank A/C *2280 To INDANE GAS BOOKING On 05/09/26 Ref 892230846667 Not You? Call 18002586161/SMS BLOCK UPI to 7308080808",
+    "gold": {
+      "direction": "debit",
+      "amount": 4065.35,
+      "currency": "INR",
+      "counterparty": "INDANE GAS BOOKING",
+      "channel": "upi",
+      "account_last4": "2280",
+      "date": "2026-09-05",
+      "category": "utilities"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 4065.35,
+        "currency": "INR",
+        "counterparty": "INDANE GAS BOOKING",
+        "channel": "imps",
+        "account_last4": "2280",
+        "date": "2026-09-05",
+        "category": "utilities"
+      },
+      "ms": 2137.4876250047237,
+      "p": 289,
+      "c": 75
+    }
+  },
+  {
+    "text": "ICICI Bank Acct XX862 debited for Rs 7359.00 on 06-Jun-26; SUNIL PLUMBER credited. UPI:428592802888. Call 18002662 for dispute. SMS BLOCK 862 to 9215676766.",
+    "gold": {
+      "direction": "debit",
+      "amount": 7359.0,
+      "currency": "INR",
+      "counterparty": "SUNIL PLUMBER",
+      "channel": "upi",
+      "account_last4": null,
+      "date": "2026-06-06",
+      "category": "other"
+    },
+    "out": {
+      "error": "invalid fields ['account_last4']: {'direction': 'debit', 'amount': 7359.0, 'currency': 'INR', 'counterparty': 'SUNIL PLUMBER', 'channel': 'upi', 'account_last4': '862', 'date': '2026-06-06', 'category",
+      "ms": 2598.147250013426,
+      "pred": null,
+      "p": 290,
+      "c": 74,
+      "raw": "{\"direction\": \"debit\", \"amount\": 7359.0, \"currency\": \"INR\", \"counterparty\": \"SUNIL PLUMBER\", \"channel\": \"upi\", \"account_last4\": \"862\", \"date\": \"2026-06-06\", \"category\": \"other\"}<|im_end|>"
+    }
+  },
+  {
+    "text": "Dear UPI user A/C X7689 debited by 14548.82 on date 11Aug26 trf to NEHA GUPTA Refno 004255784416. If not u? call 1800111109. -SBI",
+    "gold": {
+      "direction": "debit",
+      "amount": 14548.82,
+      "currency": "INR",
+      "counterparty": "NEHA GUPTA",
+      "channel": "upi",
+      "account_last4": "7689",
+      "date": "2026-08-11",
+      "category": "other"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 14548.82,
+        "currency": "INR",
+        "counterparty": "NEHA GUPTA",
+        "channel": "upi",
+        "account_last4": "7689",
+        "date": "2026-08-11",
+        "category": "family_transfer"
+      },
+      "ms": 2387.4023749958724,
+      "p": 280,
+      "c": 78
+    }
+  },
+  {
+    "text": "Rs 7,887.00 credited to A/c XX2608 on 07-09-26 from AMIT KUMAR via UPI Ref 877800639436. Avl Bal Rs 57,922.88 -AXIS",
+    "gold": {
+      "direction": "credit",
+      "amount": 7887.0,
+      "currency": "INR",
+      "counterparty": "AMIT KUMAR",
+      "channel": "upi",
+      "account_last4": "2608",
+      "date": "2026-09-07",
+      "category": "other"
+    },
+    "out": {
+      "pred": {
+        "direction": "credit",
+        "amount": 7887.0,
+        "currency": "INR",
+        "counterparty": "AMIT KUMAR",
+        "channel": "upi",
+        "account_last4": "2608",
+        "date": "2026-09-07",
+        "category": "family_transfer"
+      },
+      "ms": 2391.551125096157,
+      "p": 275,
+      "c": 75
+    }
+  },
+  {
+    "text": "Chachu ko 1500 transfer kiye",
+    "gold": {
+      "direction": "debit",
+      "amount": 1500.0,
+      "currency": "INR",
+      "counterparty": "Chachu",
+      "channel": "upi",
+      "account_last4": null,
+      "date": null,
+      "category": "family_transfer"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 1500,
+        "currency": "INR",
+        "counterparty": "Chachu",
+        "channel": "unknown",
+        "account_last4": null,
+        "date": null,
+        "category": "family_transfer"
+      },
+      "ms": 2407.457625027746,
+      "p": 216,
+      "c": 56
+    }
+  },
+  {
+    "text": "paanch sau rupaye YouTube de diye",
+    "gold": {
+      "direction": "debit",
+      "amount": 500.0,
+      "currency": "INR",
+      "counterparty": "YouTube",
+      "channel": "cash",
+      "account_last4": null,
+      "date": null,
+      "category": "subscriptions"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 50000,
+        "currency": "INR",
+        "counterparty": "YouTube",
+        "channel": "unknown",
+        "account_last4": null,
+        "date": null,
+        "category": "subscriptions"
+      },
+      "ms": 2021.9881248194724,
+      "p": 213,
+      "c": 55
+    }
+  },
+  {
+    "text": "Flipkart ke 2000 lage",
+    "gold": {
+      "direction": "debit",
+      "amount": 2000.0,
+      "currency": "INR",
+      "counterparty": "Flipkart",
+      "channel": "unknown",
+      "account_last4": null,
+      "date": null,
+      "category": "shopping"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 2000,
+        "currency": "INR",
+        "counterparty": "Flipkart",
+        "channel": "upi",
+        "account_last4": null,
+        "date": null,
+        "category": "shopping"
+      },
+      "ms": 2019.7025418747216,
+      "p": 214,
+      "c": 55
+    }
+  },
+  {
+    "text": "Dear Customer, EMI of INR 7,800.00 for HDFC Home Loan EMI has been successfully debited from your A/c ending 2705 on 27-Aug-26.",
+    "gold": {
+      "direction": "debit",
+      "amount": 7800.0,
+      "currency": "INR",
+      "counterparty": "HDFC Home Loan EMI",
+      "channel": "unknown",
+      "account_last4": "2705",
+      "date": "2026-08-27",
+      "category": "rent_emi"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 7800.0,
+        "currency": "INR",
+        "counterparty": "HDFC Home Loan EMI",
+        "channel": "imps",
+        "account_last4": "2705",
+        "date": "2026-08-27",
+        "category": "rent_emi"
+      },
+      "ms": 2000.4887080285698,
+      "p": 253,
+      "c": 78
+    }
+  },
+  {
+    "text": "Your A/c XX7086 debited Rs. 601.46 on 05-08-2026 to VPA dominos@ybl. UPI Ref 246770968250. Not you? Call 18001802222 -PNB",
+    "gold": {
+      "direction": "debit",
+      "amount": 601.46,
+      "currency": "INR",
+      "counterparty": "dominos@ybl",
+      "channel": "upi",
+      "account_last4": "7086",
+      "date": "2026-08-05",
+      "category": "food_delivery"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 601.46,
+        "currency": "INR",
+        "counterparty": "dominios@ybl",
+        "channel": "upi",
+        "account_last4": "7086",
+        "date": "2026-08-05",
+        "category": "food_delivery"
+      },
+      "ms": 2221.911709057167,
+      "p": 281,
+      "c": 76
+    }
+  },
+  {
+    "text": "Your A/c XX3730 debited Rs. 499.00 on 07-09-2026 to VPA timesprime@ybl. UPI Ref 237123951842. Not you? Call 18001802222 -PNB",
+    "gold": {
+      "direction": "debit",
+      "amount": 499.0,
+      "currency": "INR",
+      "counterparty": "timesprime@ybl",
+      "channel": "upi",
+      "account_last4": "3730",
+      "date": "2026-09-07",
+      "category": "subscriptions"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 499.0,
+        "currency": "INR",
+        "counterparty": "timesprime@ybl",
+        "channel": "upi",
+        "account_last4": "3730",
+        "date": "2026-09-07",
+        "category": "other"
+      },
+      "ms": 2062.0850000996143,
+      "p": 281,
+      "c": 73
+    }
+  },
+  {
+    "text": "Dear UPI user A/C X6608 debited by 4804 on date 13Sep26 trf to SOCIETY MAINTENANC Refno 997303822093. If not u? call 1800111109. -SBI",
+    "gold": {
+      "direction": "debit",
+      "amount": 4804.0,
+      "currency": "INR",
+      "counterparty": "SOCIETY MAINTENANC",
+      "channel": "upi",
+      "account_last4": "6608",
+      "date": "2026-09-13",
+      "category": "other"
+    },
+    "out": {
+      "error": "invalid fields ['account_last4']: {'direction': 'debit', 'amount': 4804, 'currency': 'INR', 'counterparty': 'SOCIETY MAINTENANC', 'channel': 'upi', 'account_last4': '608', 'date': '2026-09-13', 'categ",
+      "ms": 2060.2344998624176,
+      "pred": null,
+      "p": 277,
+      "c": 73,
+      "raw": "{\"direction\": \"debit\", \"amount\": 4804, \"currency\": \"INR\", \"counterparty\": \"SOCIETY MAINTENANC\", \"channel\": \"upi\", \"account_last4\": \"608\", \"date\": \"2026-09-13\", \"category\": \"other\"}<|im_end|>"
+    }
+  },
+  {
+    "text": "₹224 paid to BSES Rajdhani Power · Debited from KOTAK Bank ****4975 · Txn ID T2608277394161701",
+    "gold": {
+      "direction": "debit",
+      "amount": 224.0,
+      "currency": "INR",
+      "counterparty": "BSES Rajdhani Power",
+      "channel": "upi",
+      "account_last4": "4975",
+      "date": "2026-08-27",
+      "category": "utilities"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 224,
+        "currency": "INR",
+        "counterparty": "BSES Rajdhani Power",
+        "channel": "unknown",
+        "account_last4": "4975",
+        "date": "2024-01-01",
+        "category": "utilities"
+      },
+      "ms": 2202.7469999156892,
+      "p": 252,
+      "c": 72
+    }
+  },
+  {
+    "text": "Sent Rs.1212.05 From AXIS Bank A/C *2823 To SIMRAN KAUR On 03/09/26 Ref 560787382122 Not You? Call 18002586161",
+    "gold": {
+      "direction": "debit",
+      "amount": 1212.05,
+      "currency": "INR",
+      "counterparty": "SIMRAN KAUR",
+      "channel": "upi",
+      "account_last4": "2823",
+      "date": "2026-09-03",
+      "category": "other"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 1212.05,
+        "currency": "INR",
+        "counterparty": "SIMRAN KAUR",
+        "channel": "imps",
+        "account_last4": "2823",
+        "date": "2026-09-03",
+        "category": "family_transfer"
+      },
+      "ms": 2201.8999580759555,
+      "p": 271,
+      "c": 76
+    }
+  },
+  {
+    "text": "kal jooti pe baarah sau kharch hue",
+    "gold": {
+      "direction": "debit",
+      "amount": 1200.0,
+      "currency": "INR",
+      "counterparty": "jooti",
+      "channel": "unknown",
+      "account_last4": null,
+      "date": "2026-10-01",
+      "category": "shopping"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 1200,
+        "currency": "INR",
+        "counterparty": null,
+        "channel": "unknown",
+        "account_last4": null,
+        "date": null,
+        "category": "shopping"
+      },
+      "ms": 2158.0909171607345,
+      "p": 216,
+      "c": 53
+    }
+  },
+  {
+    "text": "Sent Rs.1691.08 from Kotak Bank AC X4584 to chaipoint@ybl on 22-09-26.UPI Ref 546107358735. Not you, kotak.com/fraud",
+    "gold": {
+      "direction": "debit",
+      "amount": 1691.08,
+      "currency": "INR",
+      "counterparty": "chaipoint@ybl",
+      "channel": "upi",
+      "account_last4": "4584",
+      "date": "2026-09-22",
+      "category": "food_delivery"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 1691.08,
+        "currency": "INR",
+        "counterparty": "chaipoint@ybl",
+        "channel": "upi",
+        "account_last4": "4584",
+        "date": "2026-09-22",
+        "category": "other"
+      },
+      "ms": 2156.7798340693116,
+      "p": 266,
+      "c": 76
+    }
+  },
+  {
+    "text": "rickshaw ke 100 lage",
+    "gold": {
+      "direction": "debit",
+      "amount": 100.0,
+      "currency": "INR",
+      "counterparty": "rickshaw",
+      "channel": "unknown",
+      "account_last4": null,
+      "date": null,
+      "category": "transport"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 100,
+        "currency": "INR",
+        "counterparty": null,
+        "channel": "unknown",
+        "account_last4": null,
+        "date": null,
+        "category": "transport"
+      },
+      "ms": 2193.998083937913,
+      "p": 213,
+      "c": 52
+    }
+  },
+  {
+    "text": "Payment of ₹15,642 to Ramesh Electrician successful via CRED UPI from KOTAK Bank XX0460. Ref 522309892214",
+    "gold": {
+      "direction": "debit",
+      "amount": 15642.0,
+      "currency": "INR",
+      "counterparty": "Ramesh Electrician",
+      "channel": "upi",
+      "account_last4": "0460",
+      "date": null,
+      "category": "other"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 15642,
+        "currency": "INR",
+        "counterparty": "Ramesh Electrician",
+        "channel": "upi",
+        "account_last4": "0460",
+        "date": "null",
+        "category": "other"
+      },
+      "ms": 2145.9090418647975,
+      "p": 251,
+      "c": 64
+    }
+  },
+  {
+    "text": "Sent Rs.24618.00 From HDFC Bank A/C *1863 To DR MEHTA CLINIC On 31/07/26 Ref 793093270517 Not You? Call 18002586161/SMS BLOCK UPI to 7308080808",
+    "gold": {
+      "direction": "debit",
+      "amount": 24618.0,
+      "currency": "INR",
+      "counterparty": "DR MEHTA CLINIC",
+      "channel": "upi",
+      "account_last4": "1863",
+      "date": "2026-07-31",
+      "category": "medical"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 24618.0,
+        "currency": "INR",
+        "counterparty": "DR MEHTA CLINIC",
+        "channel": "imps",
+        "account_last4": "1863",
+        "date": "2026-07-31",
+        "category": "medical"
+      },
+      "ms": 2190.599791938439,
+      "p": 292,
+      "c": 77
+    }
+  },
+  {
+    "text": "Rs 879.87 credited to A/c XX3142 on 12-07-26 from MEENA KUMARI via UPI Ref 353257922137. Avl Bal Rs 11,805.84 -HDFC",
+    "gold": {
+      "direction": "credit",
+      "amount": 879.87,
+      "currency": "INR",
+      "counterparty": "MEENA KUMARI",
+      "channel": "upi",
+      "account_last4": "3142",
+      "date": "2026-07-12",
+      "category": "other"
+    },
+    "out": {
+      "pred": {
+        "direction": "credit",
+        "amount": 879.87,
+        "currency": "INR",
+        "counterparty": "MEENA KUMARI",
+        "channel": "upi",
+        "account_last4": "3142",
+        "date": "2026-07-12",
+        "category": "family_transfer"
+      },
+      "ms": 2175.8837499655783,
+      "p": 274,
+      "c": 75
+    }
+  },
+  {
+    "text": "Rahul beta ko 20000 transfer kiye",
+    "gold": {
+      "direction": "debit",
+      "amount": 20000.0,
+      "currency": "INR",
+      "counterparty": "Rahul beta",
+      "channel": "upi",
+      "account_last4": null,
+      "date": null,
+      "category": "family_transfer"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 20000,
+        "currency": "INR",
+        "counterparty": "Rahul",
+        "channel": "unknown",
+        "account_last4": null,
+        "date": null,
+        "category": "family_transfer"
+      },
+      "ms": 2141.9547910336405,
+      "p": 218,
+      "c": 57
+    }
+  },
+  {
+    "text": "Rs 500.00 withdrawn from HDFC Bank ATM at CP DELHI from A/c x6120 on 13-08-26. Avl Bal Rs 38,793.51",
+    "gold": {
+      "direction": "debit",
+      "amount": 500.0,
+      "currency": "INR",
+      "counterparty": "HDFC Bank ATM CP DELHI",
+      "channel": "atm",
+      "account_last4": "6120",
+      "date": "2026-08-13",
+      "category": "cash_withdrawal"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 500.0,
+        "currency": "INR",
+        "counterparty": null,
+        "channel": "atm",
+        "account_last4": "6120",
+        "date": "2026-08-13",
+        "category": "cash_withdrawal"
+      },
+      "ms": 2120.3068748582155,
+      "p": 256,
+      "c": 72
+    }
+  },
+  {
+    "text": "₹3,018.79 paid to Dr Lal PathLabs · Debited from KOTAK Bank ****5959 · Txn ID T2608300130035210",
+    "gold": {
+      "direction": "debit",
+      "amount": 3018.79,
+      "currency": "INR",
+      "counterparty": "Dr Lal PathLabs",
+      "channel": "upi",
+      "account_last4": "5959",
+      "date": "2026-08-30",
+      "category": "medical"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 3018.79,
+        "currency": "INR",
+        "counterparty": "Dr Lal PathLabs",
+        "channel": "unknown",
+        "account_last4": "5959",
+        "date": "2024-01-01",
+        "category": "medical"
+      },
+      "ms": 2116.4555409923196,
+      "p": 256,
+      "c": 75
+    }
+  },
+  {
+    "text": "Didi ko 5000 transfer kiye",
+    "gold": {
+      "direction": "debit",
+      "amount": 5000.0,
+      "currency": "INR",
+      "counterparty": "Didi",
+      "channel": "upi",
+      "account_last4": null,
+      "date": null,
+      "category": "family_transfer"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 5000,
+        "currency": "INR",
+        "counterparty": "Didi",
+        "channel": "unknown",
+        "account_last4": null,
+        "date": null,
+        "category": "family_transfer"
+      },
+      "ms": 2167.8207910154015,
+      "p": 216,
+      "c": 56
+    }
+  },
+  {
+    "text": "ICICI Bank Acct XX181 debited for Rs 3121.00 on 28-Aug-26; AIRTEL PREPAID credited. UPI:945648416322. Call 18002662 for dispute. SMS BLOCK 181 to 9215676766.",
+    "gold": {
+      "direction": "debit",
+      "amount": 3121.0,
+      "currency": "INR",
+      "counterparty": "AIRTEL PREPAID",
+      "channel": "upi",
+      "account_last4": null,
+      "date": "2026-08-28",
+      "category": "utilities"
+    },
+    "out": {
+      "error": "invalid fields ['account_last4']: {'direction': 'debit', 'amount': 3121.0, 'currency': 'INR', 'counterparty': 'ICICI Bank', 'channel': 'unknown', 'account_last4': '181', 'date': '2026-08-28', 'categor",
+      "ms": 2142.7289159037173,
+      "pred": null,
+      "p": 290,
+      "c": 71,
+      "raw": "{\"direction\": \"debit\", \"amount\": 3121.0, \"currency\": \"INR\", \"counterparty\": \"ICICI Bank\", \"channel\": \"unknown\", \"account_last4\": \"181\", \"date\": \"2026-08-28\", \"category\": \"other\"}<|im_end|>"
+    }
+  },
+  {
+    "text": "Dear UPI user A/C X9798 debited by 799 on date 24Sep26 trf to TIMES PRIME Refno 426983638927. If not u? call 1800111109. -SBI",
+    "gold": {
+      "direction": "debit",
+      "amount": 799.0,
+      "currency": "INR",
+      "counterparty": "TIMES PRIME",
+      "channel": "upi",
+      "account_last4": "9798",
+      "date": "2026-09-24",
+      "category": "subscriptions"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 799,
+        "currency": "INR",
+        "counterparty": "TIMES PRIME",
+        "channel": "upi",
+        "account_last4": "9798",
+        "date": "2026-09-24",
+        "category": "other"
+      },
+      "ms": 2150.2951248548925,
+      "p": 273,
+      "c": 70
+    }
+  },
+  {
+    "text": "kapde ke 10000 lage",
+    "gold": {
+      "direction": "debit",
+      "amount": 10000.0,
+      "currency": "INR",
+      "counterparty": "kapde",
+      "channel": "cash",
+      "account_last4": null,
+      "date": null,
+      "category": "shopping"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 10000,
+        "currency": "INR",
+        "counterparty": null,
+        "channel": "unknown",
+        "account_last4": null,
+        "date": null,
+        "category": "shopping"
+      },
+      "ms": 2133.689375128597,
+      "p": 215,
+      "c": 54
+    }
+  },
+  {
+    "text": "DTH recharge pe 3000 kharch hue",
+    "gold": {
+      "direction": "debit",
+      "amount": 3000.0,
+      "currency": "INR",
+      "counterparty": "DTH recharge",
+      "channel": "unknown",
+      "account_last4": null,
+      "date": null,
+      "category": "groceries"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 3000,
+        "currency": "INR",
+        "counterparty": null,
+        "channel": "unknown",
+        "account_last4": null,
+        "date": null,
+        "category": "groceries"
+      },
+      "ms": 2134.543624939397,
+      "p": 235,
+      "c": 54
+    }
+  },
+  {
+    "text": "₹299 paid to Spotify · Debited from HDFC Bank ****4602 · Txn ID T2607013234510002",
+    "gold": {
+      "direction": "debit",
+      "amount": 299.0,
+      "currency": "INR",
+      "counterparty": "Spotify",
+      "channel": "upi",
+      "account_last4": "4602",
+      "date": "2026-07-01",
+      "category": "subscriptions"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 299,
+        "currency": "INR",
+        "counterparty": "Spotify",
+        "channel": "upi",
+        "account_last4": "4602",
+        "date": "2024-01-01",
+        "category": "subscriptions"
+      },
+      "ms": 2133.701500017196,
+      "p": 246,
+      "c": 68
+    }
+  },
+  {
+    "text": "kiraya ka 20000 cash diye parso",
+    "gold": {
+      "direction": "debit",
+      "amount": 20000.0,
+      "currency": "INR",
+      "counterparty": "kiraya",
+      "channel": "cash",
+      "account_last4": null,
+      "date": "2026-09-30",
+      "category": "rent_emi"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 20000,
+        "currency": "INR",
+        "counterparty": null,
+        "channel": "cash",
+        "account_last4": null,
+        "date": null,
+        "category": "rent_emi"
+      },
+      "ms": 2134.897124953568,
+      "p": 218,
+      "c": 56
+    }
+  },
+  {
+    "text": "₹799 paid to Times Prime · Debited from AXIS Bank ****6447 · Txn ID T2609144377149149",
+    "gold": {
+      "direction": "debit",
+      "amount": 799.0,
+      "currency": "INR",
+      "counterparty": "Times Prime",
+      "channel": "upi",
+      "account_last4": "6447",
+      "date": "2026-09-14",
+      "category": "subscriptions"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 799,
+        "currency": "INR",
+        "counterparty": "Times Prime",
+        "channel": "upi",
+        "account_last4": "6447",
+        "date": "2024-01-14",
+        "category": "other"
+      },
+      "ms": 2408.5792910773307,
+      "p": 246,
+      "c": 68
+    }
+  },
+  {
+    "text": "Rs 16,400.00 debited from A/c XX7705 towards SBI Car Loan EMI on 12-07-26. Ref 9252650523. -AXIS Bank",
+    "gold": {
+      "direction": "debit",
+      "amount": 16400.0,
+      "currency": "INR",
+      "counterparty": "SBI Car Loan EMI",
+      "channel": "unknown",
+      "account_last4": "7705",
+      "date": "2026-07-12",
+      "category": "rent_emi"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 16400.0,
+        "currency": "INR",
+        "counterparty": "SBI Car Loan EMI",
+        "channel": "imps",
+        "account_last4": "7705",
+        "date": "2026-07-12",
+        "category": "rent_emi"
+      },
+      "ms": 2407.1567500941455,
+      "p": 261,
+      "c": 78
+    }
+  },
+  {
+    "text": "Sent Rs.20400.00 From ICICI Bank A/C *1969 To MRS KAVITA LANDLORD On 18/06/26 Ref 887023269136 Note: house rent",
+    "gold": {
+      "direction": "debit",
+      "amount": 20400.0,
+      "currency": "INR",
+      "counterparty": "MRS KAVITA LANDLORD",
+      "channel": "upi",
+      "account_last4": "1969",
+      "date": "2026-06-18",
+      "category": "rent_emi"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 20400.0,
+        "currency": "INR",
+        "counterparty": "MRS KAVITA LANDLORD",
+        "channel": "imps",
+        "account_last4": "1969",
+        "date": "2026-06-18",
+        "category": "rent_emi"
+      },
+      "ms": 2368.075208971277,
+      "p": 264,
+      "c": 80
+    }
+  },
+  {
+    "text": "Dear Customer, INR 2,000.00 has been debited from A/c XX3800 for ATM WDL at BANER PUNE on 25-Jul-2026. Not you? Call AXIS immediately.",
+    "gold": {
+      "direction": "debit",
+      "amount": 2000.0,
+      "currency": "INR",
+      "counterparty": "ATM WDL BANER PUNE",
+      "channel": "atm",
+      "account_last4": "3800",
+      "date": "2026-07-25",
+      "category": "cash_withdrawal"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 2000,
+        "currency": "INR",
+        "counterparty": "ATM WDL",
+        "channel": "atm",
+        "account_last4": "3800",
+        "date": "2026-07-25",
+        "category": "cash_withdrawal"
+      },
+      "ms": 2381.2056670431048,
+      "p": 258,
+      "c": 75
+    }
+  },
+  {
+    "text": "parso Swiggy pe baarah sau kharch hue",
+    "gold": {
+      "direction": "debit",
+      "amount": 1200.0,
+      "currency": "INR",
+      "counterparty": "Swiggy",
+      "channel": "unknown",
+      "account_last4": null,
+      "date": "2026-09-30",
+      "category": "food_delivery"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 11000,
+        "currency": "INR",
+        "counterparty": "Swiggy",
+        "channel": "upi",
+        "account_last4": null,
+        "date": null,
+        "category": "food_delivery"
+      },
+      "ms": 2402.6974998414516,
+      "p": 217,
+      "c": 58
+    }
+  },
+  {
+    "text": "INR 499.00 debited A/c no. XX8678 12-06-26 20:02:54 UPI/P2M/758505316038/TIMES PRIME Not you? SMS BLOCKUPI Cust ID to 919951860002 - Axis Bank",
+    "gold": {
+      "direction": "debit",
+      "amount": 499.0,
+      "currency": "INR",
+      "counterparty": "TIMES PRIME",
+      "channel": "upi",
+      "account_last4": "8678",
+      "date": "2026-06-12",
+      "category": "subscriptions"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 499.0,
+        "currency": "INR",
+        "counterparty": "TIMES PRIME",
+        "channel": "upi",
+        "account_last4": "8678",
+        "date": "2026-06-12",
+        "category": "other"
+      },
+      "ms": 2400.221124989912,
+      "p": 291,
+      "c": 72
+    }
+  },
+  {
+    "text": "Rs 30,200.00 debited from A/c XX5549 towards HDFC Home Loan EMI on 05-09-26. Ref 9396639422. -HDFC Bank",
+    "gold": {
+      "direction": "debit",
+      "amount": 30200.0,
+      "currency": "INR",
+      "counterparty": "HDFC Home Loan EMI",
+      "channel": "unknown",
+      "account_last4": "5549",
+      "date": "2026-09-05",
+      "category": "rent_emi"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 30200.0,
+        "currency": "INR",
+        "counterparty": "HDFC Home Loan EMI",
+        "channel": "imps",
+        "account_last4": "5549",
+        "date": "2026-09-05",
+        "category": "rent_emi"
+      },
+      "ms": 2389.564041979611,
+      "p": 262,
+      "c": 79
+    }
+  },
+  {
+    "text": "Sent Rs.149.00 from Kotak Bank AC X3180 to netflix@hdfcbank on 26-06-26.UPI Ref 505848982493. Not you, kotak.com/fraud",
+    "gold": {
+      "direction": "debit",
+      "amount": 149.0,
+      "currency": "INR",
+      "counterparty": "netflix@hdfcbank",
+      "channel": "upi",
+      "account_last4": "3180",
+      "date": "2026-06-26",
+      "category": "subscriptions"
+    },
+    "out": {
+      "error": "invalid fields ['account_last4']: {'direction': 'debit', 'amount': 149.0, 'currency': 'INR', 'counterparty': 'netflix@hdfcbank', 'channel': 'upi', 'account_last4': '80', 'date': '2026-06-26', 'categor",
+      "ms": 2152.8270000126213,
+      "pred": null,
+      "p": 266,
+      "c": 73,
+      "raw": "{\"direction\": \"debit\", \"amount\": 149.0, \"currency\": \"INR\", \"counterparty\": \"netflix@hdfcbank\", \"channel\": \"upi\", \"account_last4\": \"80\", \"date\": \"2026-06-26\", \"category\": \"subscriptions\"}<|im_end|>"
+    }
+  },
+  {
+    "text": "ICICI Bank Acct XX891 debited for Rs 149.00 on 01-Jul-26; SPOTIFY credited. UPI:503870994973. Call 18002662 for dispute. SMS BLOCK 891 to 9215676766.",
+    "gold": {
+      "direction": "debit",
+      "amount": 149.0,
+      "currency": "INR",
+      "counterparty": "SPOTIFY",
+      "channel": "upi",
+      "account_last4": null,
+      "date": "2026-07-01",
+      "category": "subscriptions"
+    },
+    "out": {
+      "error": "invalid fields ['account_last4']: {'direction': 'debit', 'amount': 149.0, 'currency': 'INR', 'counterparty': 'SPOTIFY', 'channel': 'upi', 'account_last4': '891', 'date': '2026-07-01', 'category': 'sub",
+      "ms": 2131.212041946128,
+      "pred": null,
+      "p": 287,
+      "c": 70,
+      "raw": "{\"direction\": \"debit\", \"amount\": 149.0, \"currency\": \"INR\", \"counterparty\": \"SPOTIFY\", \"channel\": \"upi\", \"account_last4\": \"891\", \"date\": \"2026-07-01\", \"category\": \"subscriptions\"}<|im_end|>"
+    }
+  },
+  {
+    "text": "Rs 25,600.00 debited from A/c XX2958 towards HDFC Home Loan EMI on 29-06-26. Ref 5453620866. -SBI Bank",
+    "gold": {
+      "direction": "debit",
+      "amount": 25600.0,
+      "currency": "INR",
+      "counterparty": "HDFC Home Loan EMI",
+      "channel": "unknown",
+      "account_last4": "2958",
+      "date": "2026-06-29",
+      "category": "rent_emi"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 25600.0,
+        "currency": "INR",
+        "counterparty": "HDFC Home Loan EMI",
+        "channel": "imps",
+        "account_last4": "2958",
+        "date": "2026-06-29",
+        "category": "rent_emi"
+      },
+      "ms": 2121.030749985948,
+      "p": 261,
+      "c": 79
+    }
+  },
+  {
+    "text": "80 rupaye Sharma ji ki dukaan online kiye",
+    "gold": {
+      "direction": "debit",
+      "amount": 80.0,
+      "currency": "INR",
+      "counterparty": "Sharma ji ki dukaan",
+      "channel": "upi",
+      "account_last4": null,
+      "date": null,
+      "category": "groceries"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 80,
+        "currency": "INR",
+        "counterparty": "Sharma ji ki dukaan",
+        "channel": "upi",
+        "account_last4": null,
+        "date": null,
+        "category": "shopping"
+      },
+      "ms": 2106.8495409563184,
+      "p": 217,
+      "c": 57
+    }
+  },
+  {
+    "text": "society maintenance ke saath lage aaj",
+    "gold": {
+      "direction": "debit",
+      "amount": 60.0,
+      "currency": "INR",
+      "counterparty": "society maintenance",
+      "channel": "unknown",
+      "account_last4": null,
+      "date": "2026-10-02",
+      "category": "other"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 0,
+        "currency": "INR",
+        "counterparty": null,
+        "channel": "unknown",
+        "account_last4": null,
+        "date": null,
+        "category": "utilities"
+      },
+      "ms": 2115.810167044401,
+      "p": 214,
+      "c": 50
+    }
+  }
+]

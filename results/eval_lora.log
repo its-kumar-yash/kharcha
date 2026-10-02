@@ -1,0 +1,63 @@
+
+=== lora on 150 messages
+{
+ "valid": 1.0,
+ "amount": 1.0,
+ "direction": 1.0,
+ "counterparty": 1.0,
+ "channel": 0.9733333333333334,
+ "last4": 1.0,
+ "date": 1.0,
+ "category": 1.0,
+ "all": 0.9733333333333334,
+ "p50_ms": 2691.925229039043,
+ "p95_ms": 7711.891165934503,
+ "usd_per_1k": 0.31438409999999994,
+ "n": 150,
+ "hinted_category_acc": 1.0
+}
+# Kharcha eval: 150 held-out messages
+
+| System | valid | amount | direction | counterparty | channel | last4 | date | category | all | p50 ms | p95 ms | $/1k msgs |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Qwen3.5-4B zero-shot (Tinker) | 93% | 89% | 93% | 76% | 65% | 93% | 72% | 71% | 28% | 2175 | 2988 | $0.327 |
+| gpt-oss-120b zero-shot (Tinker) | 97% | 97% | 97% | 85% | 81% | 96% | 76% | 81% | 49% | 2798 | 3560 | $0.381 |
+| Qwen3.5-4B + Kharcha LoRA (Tinker) | 100% | 100% | 100% | 100% | 97% | 100% | 100% | 100% | 97% | 2692 | 7712 | $0.314 |
+
+`all` = every field exact. `$/1k` uses Tinker sampling prices; Ollama is local so marginal cost is zero.
+
+## Category accuracy on messages that carried a user hint (Backboard memory)
+- Qwen3.5-4B zero-shot (Tinker): 86%
+- gpt-oss-120b zero-shot (Tinker): 86%
+- Qwen3.5-4B + Kharcha LoRA (Tinker): 100%
+
+## All-fields accuracy by template
+| template | base | big | lora |
+|---|---|---|---|
+| atm_a | 0% | 0% | 100% |
+| atm_b | 0% | 0% | 100% |
+| autopay | 56% | 56% | 100% |
+| axis_upi | 20% | 20% | 100% |
+| cred | 14% | 100% | 100% |
+| emi | 0% | 80% | 100% |
+| gpay | 83% | 100% | 100% |
+| hdfc_card | 83% | 100% | 100% |
+| hdfc_upi | 25% | 25% | 100% |
+| icici_card | 100% | 50% | 100% |
+| icici_upi | 0% | 17% | 100% |
+| imps_credit_salary | 0% | 0% | 100% |
+| kotak_upi | 17% | 50% | 100% |
+| neft_salary | 75% | 50% | 100% |
+| p2p_credit | 25% | 75% | 100% |
+| p2p_imps | 100% | 100% | 100% |
+| p2p_upi | 0% | 0% | 100% |
+| paytm | 100% | 100% | 100% |
+| phonepe | 0% | 0% | 100% |
+| pnb_upi | 40% | 60% | 100% |
+| rent_transfer | 25% | 0% | 100% |
+| sbi_card | 40% | 100% | 100% |
+| sbi_upi | 33% | 67% | 100% |
+| voice_atm | 0% | 0% | 100% |
+| voice_family | 0% | 57% | 100% |
+| voice_merchant | 0% | 17% | 83% |
+chart -> /Users/yashkumar/Desktop/Project/kharcha/out/results.png

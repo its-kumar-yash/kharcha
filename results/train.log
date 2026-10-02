@@ -1,0 +1,120 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+train=1200 val=150 base=Qwen/Qwen3.5-4B rank=16
+console: https://tinker.thinkingmachines.ai/training_runs/d29f21ea-bcb2-57a8-bd2d-f5a8c040fa58:train:0
+tokens/example: mean=318 max=380
+steps/epoch=37 total_steps=111
+step    0/111 lr=4.00e-05 train_nll=2.3855 val_nll=2.3634
+step    1/111 lr=7.93e-05 train_nll=2.3929
+step    2/111 lr=1.18e-04 train_nll=2.3330
+step    3/111 lr=1.56e-04 train_nll=2.2950
+step    4/111 lr=1.93e-04 train_nll=2.2448
+step    5/111 lr=1.92e-04 train_nll=2.2303
+step    6/111 lr=1.90e-04 train_nll=2.1953
+step    7/111 lr=1.89e-04 train_nll=2.1311
+step    8/111 lr=1.87e-04 train_nll=2.1253
+step    9/111 lr=1.85e-04 train_nll=2.1272
+step   10/111 lr=1.84e-04 train_nll=2.0922 val_nll=2.1152
+step   11/111 lr=1.82e-04 train_nll=2.1202
+step   12/111 lr=1.80e-04 train_nll=2.1592
+step   13/111 lr=1.79e-04 train_nll=2.1154
+step   14/111 lr=1.77e-04 train_nll=2.1419
+step   15/111 lr=1.75e-04 train_nll=2.1060
+step   16/111 lr=1.74e-04 train_nll=2.1342
+step   17/111 lr=1.72e-04 train_nll=2.0848
+step   18/111 lr=1.71e-04 train_nll=2.1018
+step   19/111 lr=1.69e-04 train_nll=2.0899
+step   20/111 lr=1.67e-04 train_nll=2.1141 val_nll=2.0882
+step   21/111 lr=1.66e-04 train_nll=2.1053
+step   22/111 lr=1.64e-04 train_nll=2.1067
+step   23/111 lr=1.62e-04 train_nll=2.1064
+step   24/111 lr=1.61e-04 train_nll=2.1133
+step   25/111 lr=1.59e-04 train_nll=2.1016
+step   26/111 lr=1.57e-04 train_nll=2.1194
+step   27/111 lr=1.56e-04 train_nll=2.1396
+step   28/111 lr=1.54e-04 train_nll=2.1576
+step   29/111 lr=1.53e-04 train_nll=2.1458
+step   30/111 lr=1.51e-04 train_nll=2.1717 val_nll=2.1461
+step   31/111 lr=1.49e-04 train_nll=2.1453
+step   32/111 lr=1.48e-04 train_nll=2.1373
+step   33/111 lr=1.46e-04 train_nll=2.1879
+step   34/111 lr=1.44e-04 train_nll=2.1429
+step   35/111 lr=1.43e-04 train_nll=2.1944
+step   36/111 lr=1.41e-04 train_nll=2.1710
+step   37/111 lr=1.39e-04 train_nll=2.1779
+step   38/111 lr=1.38e-04 train_nll=2.1590
+step   39/111 lr=1.36e-04 train_nll=2.1700
+step   40/111 lr=1.35e-04 train_nll=2.1686 val_nll=2.1557
+step   41/111 lr=1.33e-04 train_nll=2.1595
+step   42/111 lr=1.31e-04 train_nll=2.1783
+step   43/111 lr=1.30e-04 train_nll=2.1862
+step   44/111 lr=1.28e-04 train_nll=2.1469
+step   45/111 lr=1.26e-04 train_nll=2.1453
+step   46/111 lr=1.25e-04 train_nll=2.1783
+step   47/111 lr=1.23e-04 train_nll=2.1511
+step   48/111 lr=1.21e-04 train_nll=2.1352
+step   49/111 lr=1.20e-04 train_nll=2.1367
+step   50/111 lr=1.18e-04 train_nll=2.1743 val_nll=2.1429
+step   51/111 lr=1.17e-04 train_nll=2.1447
+step   52/111 lr=1.15e-04 train_nll=2.1768
+step   53/111 lr=1.13e-04 train_nll=2.1590
+step   54/111 lr=1.12e-04 train_nll=2.1235
+step   55/111 lr=1.10e-04 train_nll=2.1882
+step   56/111 lr=1.08e-04 train_nll=2.1612
+step   57/111 lr=1.07e-04 train_nll=2.1400
+step   58/111 lr=1.05e-04 train_nll=2.1691
+step   59/111 lr=1.03e-04 train_nll=2.1601
+step   60/111 lr=1.02e-04 train_nll=2.1326 val_nll=2.1372
+step   61/111 lr=1.00e-04 train_nll=2.1313
+step   62/111 lr=9.85e-05 train_nll=2.1223
+step   63/111 lr=9.69e-05 train_nll=2.1756
+step   64/111 lr=9.53e-05 train_nll=2.1486
+step   65/111 lr=9.36e-05 train_nll=2.1518
+step   66/111 lr=9.20e-05 train_nll=2.1722
+step   67/111 lr=9.04e-05 train_nll=2.1436
+step   68/111 lr=8.87e-05 train_nll=2.1536
+step   69/111 lr=8.71e-05 train_nll=2.1402
+step   70/111 lr=8.55e-05 train_nll=2.1640 val_nll=2.1342
+step   71/111 lr=8.38e-05 train_nll=2.1482
+step   72/111 lr=8.22e-05 train_nll=2.1239
+step   73/111 lr=8.05e-05 train_nll=2.1224
+step   74/111 lr=7.89e-05 train_nll=2.1151
+step   75/111 lr=7.73e-05 train_nll=2.1292
+step   76/111 lr=7.56e-05 train_nll=2.1249
+step   77/111 lr=7.40e-05 train_nll=2.1711
+step   78/111 lr=7.24e-05 train_nll=2.1088
+step   79/111 lr=7.07e-05 train_nll=2.0919
+step   80/111 lr=6.91e-05 train_nll=2.1262 val_nll=2.1171
+step   81/111 lr=6.75e-05 train_nll=2.1473
+step   82/111 lr=6.58e-05 train_nll=2.1168
+step   83/111 lr=6.42e-05 train_nll=2.1077
+step   84/111 lr=6.25e-05 train_nll=2.1374
+step   85/111 lr=6.09e-05 train_nll=2.1556
+step   86/111 lr=5.93e-05 train_nll=2.1358
+step   87/111 lr=5.76e-05 train_nll=2.1379
+step   88/111 lr=5.60e-05 train_nll=2.1539
+step   89/111 lr=5.44e-05 train_nll=2.1431
+step   90/111 lr=5.27e-05 train_nll=2.1429 val_nll=2.1196
+step   91/111 lr=5.11e-05 train_nll=2.1595
+step   92/111 lr=4.95e-05 train_nll=2.1441
+step   93/111 lr=4.78e-05 train_nll=2.1378
+step   94/111 lr=4.62e-05 train_nll=2.1045
+step   95/111 lr=4.45e-05 train_nll=2.1545
+step   96/111 lr=4.29e-05 train_nll=2.1368
+step   97/111 lr=4.13e-05 train_nll=2.1569
+step   98/111 lr=3.96e-05 train_nll=2.1060
+step   99/111 lr=3.80e-05 train_nll=2.1387
+step  100/111 lr=3.64e-05 train_nll=2.1346 val_nll=2.1249
+step  101/111 lr=3.47e-05 train_nll=2.1117
+step  102/111 lr=3.31e-05 train_nll=2.1314
+step  103/111 lr=3.15e-05 train_nll=2.1278
+step  104/111 lr=2.98e-05 train_nll=2.1458
+step  105/111 lr=2.82e-05 train_nll=2.1192
+step  106/111 lr=2.65e-05 train_nll=2.1335
+step  107/111 lr=2.49e-05 train_nll=2.1201
+step  108/111 lr=2.33e-05 train_nll=2.1394
+step  109/111 lr=2.16e-05 train_nll=2.1446
+step  110/111 lr=2.00e-05 train_nll=2.1285 val_nll=2.1168
+
+SAMPLER_PATH = tinker://d29f21ea-bcb2-57a8-bd2d-f5a8c040fa58:train:0/sampler_weights/kharcha-v1
+STATE_PATH   = tinker://d29f21ea-bcb2-57a8-bd2d-f5a8c040fa58:train:0/weights/kharcha-v1-state
+Add to .env:  KHARCHA_SAMPLER_PATH=tinker://d29f21ea-bcb2-57a8-bd2d-f5a8c040fa58:train:0/sampler_weights/kharcha-v1

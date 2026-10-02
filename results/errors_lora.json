@@ -1,0 +1,114 @@
+[
+  {
+    "text": "jooti ke 1200 lage kal",
+    "gold": {
+      "direction": "debit",
+      "amount": 1200.0,
+      "currency": "INR",
+      "counterparty": "jooti",
+      "channel": "unknown",
+      "account_last4": null,
+      "date": "2026-10-01",
+      "category": "shopping"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 1200.0,
+        "currency": "INR",
+        "counterparty": "jooti",
+        "channel": "cash",
+        "account_last4": null,
+        "date": "2026-10-01",
+        "category": "shopping"
+      },
+      "ms": 2662.5307919457555,
+      "p": 216,
+      "c": 54
+    }
+  },
+  {
+    "text": "makaan malik ke paanch hazaar lage aaj",
+    "gold": {
+      "direction": "debit",
+      "amount": 5000.0,
+      "currency": "INR",
+      "counterparty": "makaan malik",
+      "channel": "unknown",
+      "account_last4": null,
+      "date": "2026-10-02",
+      "category": "rent_emi"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 5000.0,
+        "currency": "INR",
+        "counterparty": "makaan malik",
+        "channel": "cash",
+        "account_last4": null,
+        "date": "2026-10-02",
+        "category": "rent_emi"
+      },
+      "ms": 6013.004750013351,
+      "p": 217,
+      "c": 57
+    }
+  },
+  {
+    "text": "kal Amazon pe 10000 kharch hue",
+    "gold": {
+      "direction": "debit",
+      "amount": 10000.0,
+      "currency": "INR",
+      "counterparty": "Amazon",
+      "channel": "cash",
+      "account_last4": null,
+      "date": "2026-10-01",
+      "category": "shopping"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 10000.0,
+        "currency": "INR",
+        "counterparty": "Amazon",
+        "channel": "unknown",
+        "account_last4": null,
+        "date": "2026-10-01",
+        "category": "shopping"
+      },
+      "ms": 3091.8512498028576,
+      "p": 217,
+      "c": 53
+    }
+  },
+  {
+    "text": "kal jooti pe baarah sau kharch hue",
+    "gold": {
+      "direction": "debit",
+      "amount": 1200.0,
+      "currency": "INR",
+      "counterparty": "jooti",
+      "channel": "unknown",
+      "account_last4": null,
+      "date": "2026-10-01",
+      "category": "shopping"
+    },
+    "out": {
+      "pred": {
+        "direction": "debit",
+        "amount": 1200.0,
+        "currency": "INR",
+        "counterparty": "jooti",
+        "channel": "cash",
+        "account_last4": null,
+        "date": "2026-10-01",
+        "category": "shopping"
+      },
+      "ms": 2029.773792019114,
+      "p": 216,
+      "c": 54
+    }
+  }
+]
