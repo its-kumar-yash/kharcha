@@ -26,7 +26,7 @@ Hosted demo: **https://kharcha.onrender.com** (free tier, first load takes about
 
 ## Code
 
-<!-- TODO: {% embed https://github.com/<user>/kharcha %} -->
+{% embed https://github.com/its-kumar-yash/kharcha %}
 
 ## How I Built It
 
@@ -70,7 +70,7 @@ Same 150 held-out messages, same prompt, exact-match on every field. The two bas
 | Qwen3.5-4B + Kharcha LoRA | 100% | 100% | 100% | 100% | 100% | **97%** | 2.7 s | $0.31 |
 | Kharcha LoRA on Ollama, M1 Pro, offline | <!-- TODO --> | | | | | | <!-- TODO --> | **$0** |
 
-<!-- TODO: embed results.png -->
+![All-fields and category accuracy on 150 held-out messages](https://raw.githubusercontent.com/its-kumar-yash/kharcha/main/results/results.png)
 
 The four misses are all the same thing: whether "jooti ke 1200 lage" was paid in cash or by an unknown channel. My own labels decide that arbitrarily, so I count those as label noise rather than model error.
 
