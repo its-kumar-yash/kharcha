@@ -1,0 +1,7 @@
+-r requirements.txt
+torch
+transformers>=4.45
+peft>=0.13
+safetensors
+sentencepiece
+matplotlib

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kharcha · ghar ka hisaab</title>
+<style>
+  :root { --bg:#faf7f2; --card:#fff; --ink:#1f1d1a; --muted:#7a736b; --accent:#b5541c; --accent2:#2a9d8f; --line:#e9e2d8; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family: -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif; background:var(--bg); color:var(--ink); }
+  header { padding:20px 16px 8px; max-width:820px; margin:0 auto; display:flex; align-items:baseline; justify-content:space-between; }
+  h1 { margin:0; font-size:26px; letter-spacing:-.01em; }
+  h1 small { font-weight:400; color:var(--muted); font-size:14px; margin-left:8px; }
+  .badge { font-size:12px; padding:4px 10px; border-radius:999px; background:#e8f5f3; color:#1d6f66; border:1px solid #cfe8e4; }
+  .badge.cloud { background:#fff3e8; color:#9a4a16; border-color:#f3d9c4; }
+  main { max-width:820px; margin:0 auto; padding:8px 16px 60px; display:grid; gap:14px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 16px; }
+  textarea { width:100%; min-height:88px; font:inherit; font-size:15px; padding:10px 12px; border-radius:10px; border:1px solid var(--line); resize:vertical; }
+  button { font:inherit; font-size:15px; padding:10px 16px; border-radius:10px; border:0; background:var(--accent); color:#fff; cursor:pointer; }
+  button.secondary { background:#eee7dd; color:var(--ink); }
+  button:disabled { opacity:.5; cursor:wait; }
+  .row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-top:10px; }
+  .hint { color:var(--muted); font-size:13px; }
+  .samples { display:flex; gap:6px; flex-wrap:wrap; margin-top:8px; }
+  .samples button { font-size:12px; padding:6px 10px; background:#f3eee6; color:var(--ink); }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th, td { text-align:left; padding:8px 6px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--muted); font-weight:500; font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+  td.amt { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  td.amt.credit { color:var(--accent2); }
+  select { font:inherit; font-size:13px; padding:4px 6px; border-radius:8px; border:1px solid var(--line); background:#fff; }
+  .bars { display:grid; gap:6px; margin-top:8px; }
+  .bar { display:grid; grid-template-columns: 130px 1fr 90px; gap:8px; align-items:center; font-size:13px; }
+  .bar i { display:block; height:10px; border-radius:6px; background:linear-gradient(90deg, var(--accent), #e39a63); }
+  .totals { display:flex; gap:18px; font-size:14px; color:var(--muted); }
+  .totals b { color:var(--ink); font-size:18px; display:block; }
+  .chat { display:grid; gap:8px; }
+  .msg { padding:8px 12px; border-radius:12px; max-width:85%; font-size:14px; white-space:pre-wrap; }
+  .msg.q { background:#f3eee6; justify-self:end; }
+  .msg.a { background:#e8f5f3; }
+  .del { background:none; color:var(--muted); padding:2px 6px; font-size:16px; }
+  .toast { position:fixed; bottom:18px; left:50%; transform:translateX(-50%); background:#1f1d1a; color:#fff; padding:10px 14px; border-radius:10px; font-size:14px; opacity:0; transition:opacity .2s; }
+  .toast.show { opacity:1; }
+  .raw { color:var(--muted); font-size:12px; margin-top:2px; max-width:420px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  @media (max-width:640px) { .hide-m { display:none; } .bar { grid-template-columns: 100px 1fr 80px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Kharcha <small>ghar ka hisaab, phone se bahar nahi jaata</small></h1>
+  <span id="badge" class="badge">…</span>
+</header>
+<main>
+  <section class="card">
+    <textarea id="text" placeholder="Bank ka SMS yahan paste karo, ya bolo jaise: 'aaj sabzi wale ko 80 diye'"></textarea>
+    <div class="row">
+      <button id="parse">Add to ledger</button>
+      <label class="hint"><input type="checkbox" id="usemem" checked> use remembered rules</label>
+      <span id="status" class="hint"></span>
+    </div>
+    <div class="samples" id="samples"></div>
+  </section>
+
+  <section class="card">
+    <div class="row" style="margin-top:0; justify-content:space-between">
+      <div class="totals">
+        <span>Spent <b id="t-debit">₹0</b></span>
+        <span>Received <b id="t-credit">₹0</b></span>
+      </div>
+      <input type="month" id="month">
+    </div>
+    <div class="bars" id="bars"></div>
+  </section>
+
+  <section class="card">
+    <table>
+      <thead><tr><th>Date</th><th>Where</th><th class="hide-m">How</th><th>Category</th><th style="text-align:right">₹</th><th></th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <p class="hint" id="empty">Kuch nahi hai abhi. Ek SMS paste karo.</p>
+  </section>
+
+  <section class="card">
+    <div class="chat" id="chat"></div>
+    <div class="row">
+      <textarea id="q" style="min-height:44px" placeholder="Poochho: is mahine kirane pe kitna gaya?"></textarea>
+      <button id="ask" class="secondary">Ask</button>
+    </div>
+    <p class="hint">Answers come from Backboard memory + an open-weight model. The parser itself never needs the internet.</p>
+  </section>
+</main>
+<div class="toast" id="toast"></div>
+
+<script>
+const $ = s => document.querySelector(s);
+const inr = n => '₹' + Math.round(n).toLocaleString('en-IN');
+let CATS = [];
+let threadId = null;
+const SAMPLES = [
+  "Sent Rs.340.00 From HDFC Bank A/C *4521 To SHARMA KIRANA STORE On 02/10/26 Ref 827364512345 Not You? Call 18002586161",
+  "₹649 paid to Netflix · Debited from ICICI Bank ****2210 · Txn ID T2510021432001234",
+  "aaj auto ke 60 lage",
+  "Rahul beta ko 2000 bheje",
+  "Your A/C XXXXX3011 Credited INR 72,300.00 on 01/10/26 by NEFT from URBAN COMPANY (Ref 3272941176987157) -SBI",
+  "Rs 5000.00 withdrawn from SBI ATM at LAJPAT NAGAR from A/c x3011 on 02-10-26. Avl Bal Rs 40,210.00",
+];
+
+function toast(m){ const t=$('#toast'); t.textContent=m; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2200); }
+async function api(path, opts){ const r = await fetch(path, {headers:{'Content-Type':'application/json'}, ...opts}); if(!r.ok){ throw new Error((await r.json()).detail || r.statusText);} return r.json(); }
+
+async function init(){
+  CATS = await api('/categories');
+  const h = await api('/health');
+  const b = $('#badge');
+  if (h.backend === 'ollama') { b.textContent = '🔒 parsing locally with Ollama'; }
+  else { b.textContent = '☁️ demo: LoRA served by Tinker'; b.classList.add('cloud'); }
+  $('#month').value = new Date().toISOString().slice(0,7);
+  SAMPLES.forEach(s => { const btn=document.createElement('button'); btn.textContent = s.length>38 ? s.slice(0,38)+'…' : s; btn.title=s; btn.onclick=()=>{$('#text').value=s;}; $('#samples').appendChild(btn); });
+  await refresh();
+}
+
+async function refresh(){
+  const month = $('#month').value;
+  const {entries, summary} = await api('/ledger?month='+month);
+  $('#t-debit').textContent = inr(summary.debit); $('#t-credit').textContent = inr(summary.credit);
+  const max = Math.max(1, ...Object.values(summary.by_category));
+  $('#bars').innerHTML = Object.entries(summary.by_category).map(([c,v]) =>
+    `<div class="bar"><span>${c.replace('_',' ')}</span><i style="width:${(v/max*100).toFixed(1)}%"></i><span style="text-align:right">${inr(v)}</span></div>`).join('');
+  $('#empty').style.display = entries.length ? 'none' : 'block';
+  $('#rows').innerHTML = entries.map(e => `<tr data-id="${e.id}">
+      <td>${e.date || ''}</td>
+      <td>${e.counterparty || '—'}<div class="raw" title="${esc(e.raw_text)}">${esc(e.raw_text)}</div></td>
+      <td class="hide-m">${e.channel}</td>
+      <td><select data-id="${e.id}">${CATS.map(c=>`<option ${c===e.category?'selected':''}>${c}</option>`).join('')}</select></td>
+      <td class="amt ${e.direction}">${e.direction==='credit'?'+':'−'}${inr(e.amount)}</td>
+      <td><button class="del" data-del="${e.id}" title="delete">×</button></td></tr>`).join('');
+  document.querySelectorAll('select[data-id]').forEach(s => s.onchange = async () => {
+    const r = await api('/correct', {method:'POST', body: JSON.stringify({id:+s.dataset.id, category:s.value})});
+    toast(r.remembered ? 'Yaad rakh liya: ' + r.remembered : 'Updated'); refresh();
+  });
+  document.querySelectorAll('button[data-del]').forEach(b => b.onclick = async () => { await api('/entries/'+b.dataset.del, {method:'DELETE'}); refresh(); });
+}
+const esc = s => (s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+$('#parse').onclick = async () => {
+  const text = $('#text').value.trim(); if(!text) return;
+  $('#parse').disabled = true; $('#status').textContent = 'parsing…';
+  try {
+    const e = await api('/parse', {method:'POST', body: JSON.stringify({text, use_memory: $('#usemem').checked})});
+    $('#status').textContent = `${e.latency_ms} ms · ${e.backend}` + (e.hints && e.hints.length ? ` · used ${e.hints.length} remembered rule(s)` : '');
+    $('#text').value = ''; await refresh();
+  } catch(err) { $('#status').textContent = ''; toast(err.message); }
+  $('#parse').disabled = false;
+};
+$('#month').onchange = refresh;
+$('#ask').onclick = async () => {
+  const q = $('#q').value.trim(); if(!q) return;
+  $('#chat').insertAdjacentHTML('beforeend', `<div class="msg q">${esc(q)}</div>`); $('#q').value=''; $('#ask').disabled = true;
+  try { const r = await api('/ask', {method:'POST', body: JSON.stringify({question:q, month:$('#month').value, thread_id:threadId})});
+    threadId = r.thread_id || threadId; $('#chat').insertAdjacentHTML('beforeend', `<div class="msg a">${esc(r.answer)}</div>`);
+  } catch(err) { toast(err.message); }
+  $('#ask').disabled = false;
+};
+init();
+</script>
+</body>
+</html>

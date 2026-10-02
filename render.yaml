@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: kharcha
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.6
+      - key: PARSER_BACKEND
+        value: tinker
+      - key: TINKER_API_KEY
+        sync: false
+      - key: KHARCHA_SAMPLER_PATH
+        sync: false
+      - key: BACKBOARD_API_KEY
+        sync: false
+      - key: BACKBOARD_LLM_PROVIDER
+        value: openrouter
+      - key: BACKBOARD_MODEL_NAME
+        value: qwen/qwen3-32b
+      - key: KHARCHA_DB
+        value: /tmp/kharcha.db
+      - key: KHARCHA_STATE
+        value: /tmp/backboard_state.json

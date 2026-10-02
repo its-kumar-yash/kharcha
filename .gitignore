@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+out/
+data/train.jsonl
+data/val.jsonl
+*.gguf
+*.safetensors
+kharcha.db
+.DS_Store
+llama.cpp/

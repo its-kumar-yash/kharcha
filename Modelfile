@@ -1,0 +1,19 @@
+# Kharcha: Qwen3.5-4B + Tinker LoRA (merged), quantised for Ollama.
+# The empty <think> block mirrors Tinker's qwen3_5_disable_thinking renderer used in training. {{GGUF}} is filled by train/export_adapter.py.
+FROM {{GGUF}}
+
+TEMPLATE """{{- if .System }}<|im_start|>system
+{{ .System }}<|im_end|>
+{{ end }}{{- range .Messages }}<|im_start|>{{ .Role }}
+{{ .Content }}<|im_end|>
+{{ end }}<|im_start|>assistant
+<think>
+
+</think>
+
+"""
+
+PARAMETER temperature 0
+PARAMETER num_predict 200
+PARAMETER stop "<|im_end|>"
+PARAMETER stop "<|endoftext|>"
