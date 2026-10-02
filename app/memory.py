@@ -153,8 +153,9 @@ class Memory:
 
     # ------------------------------------------------------------------ chat
     def chat(self, content: str, thread_id: str | None = None) -> tuple[str | None, str | None]:
-        """Chat through Backboard with memory=Auto. Returns (answer or None if Backboard has no LLM credits, thread_id)."""
-        body = {"content": content, "assistant_id": self.assistant_id(), "memory": "Auto",
+        """Chat through Backboard. memory=Readonly on purpose: the ledger summary we send must be
+        *used* for the answer but never *stored* as a memory. Returns (answer or None, thread_id)."""
+        body = {"content": content, "assistant_id": self.assistant_id(), "memory": "Readonly",
                 "llm_provider": self.provider, "model_name": self.model, "stream": False}
         if thread_id:
             body["thread_id"] = thread_id
