@@ -4,4 +4,4 @@ pydantic>=2.7
 requests>=2.32
 python-dotenv>=1.0
 tinker
-tinker-cookbook
+# tinker-cookbook is only needed for training/export: see requirements-train.txt

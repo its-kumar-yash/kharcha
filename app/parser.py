@@ -92,22 +92,13 @@ class TinkerBackend(ParserBackend):
     name = "tinker"
 
     def __init__(self, sampler_path: str | None = None):
-        import tinker
-        from tinker_cookbook.renderers import get_renderer
+        from app.tinker_client import TinkerSampler
 
         self.sampler_path = sampler_path or os.environ["KHARCHA_SAMPLER_PATH"]
-        self.service = tinker.ServiceClient()
-        self.client = self.service.create_sampling_client(model_path=self.sampler_path)
-        self.tokenizer = self.client.get_tokenizer()
-        self.renderer = get_renderer(os.environ.get("TINKER_RENDERER", "qwen3_5_disable_thinking"), self.tokenizer)
-        self.params = tinker.SamplingParams(max_tokens=200, temperature=0.0, stop=self.renderer.get_stop_sequences())
+        self.sampler = TinkerSampler(model_path=self.sampler_path, max_tokens=200, temperature=0.0)
 
     def complete(self, system: str, user: str) -> str:
-        prompt = self.renderer.build_generation_prompt(
-            [{"role": "system", "content": system}, {"role": "user", "content": user}]
-        )
-        result = self.client.sample(prompt=prompt, num_samples=1, sampling_params=self.params).result()
-        return self.tokenizer.decode(result.sequences[0].tokens)
+        return self.sampler.complete(system, user)
 
 
 def get_backend() -> ParserBackend:

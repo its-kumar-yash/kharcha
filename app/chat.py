@@ -39,24 +39,13 @@ class OllamaChat:
 
 class TinkerChat:
     def __init__(self):
-        import tinker
-        from tinker_cookbook.renderers import get_renderer
+        from app.tinker_client import TinkerSampler
 
         self.model = os.environ.get("TINKER_CHAT_MODEL", "openai/gpt-oss-120b")
-        renderer = os.environ.get("TINKER_CHAT_RENDERER", "gpt_oss_low_reasoning" if "gpt-oss" in self.model else "qwen3_5_disable_thinking")
-        self.client = tinker.ServiceClient().create_sampling_client(base_model=self.model)
-        self.tok = self.client.get_tokenizer()
-        self.renderer = get_renderer(renderer, self.tok)
-        self.params = tinker.SamplingParams(max_tokens=400, temperature=0.3, stop=self.renderer.get_stop_sequences())
+        self.sampler = TinkerSampler(base_model=self.model, max_tokens=400, temperature=0.3)
 
     def complete(self, system: str, user: str) -> str:
-        prompt = self.renderer.build_generation_prompt([{"role": "system", "content": system}, {"role": "user", "content": user}])
-        res = self.client.sample(prompt=prompt, num_samples=1, sampling_params=self.params).result()
-        text = self.tok.decode(res.sequences[0].tokens)
-        # gpt-oss harmony: keep only the final channel if present
-        if "<|channel|>final<|message|>" in text:
-            text = text.split("<|channel|>final<|message|>")[-1]
-        return text.replace("<|return|>", "").replace("<|end|>", "").strip()
+        return self.sampler.complete(system, user)
 
 
 class Asker:
