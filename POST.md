@@ -18,9 +18,9 @@ It understands the formats of HDFC, SBI, ICICI, Axis, Kotak and PNB, the PhonePe
 
 ## Demo
 
-<!-- TODO: Render URL + 60-90s video -->
+<!-- TODO: 60-90s video -->
 
-Hosted demo: **https://kharcha.onrender.com** (free tier, first load takes about a minute to wake up). The demo serves the same fine-tuned adapter from Tinker's sampling API because the free tier cannot hold a 4B model. At home it runs on Ollama with Wi-Fi off.
+Hosted demo: **https://kharcha-4aax.onrender.com** (free tier, first load takes about a minute to wake up). The demo serves the same fine-tuned adapter from Tinker's sampling API because the free tier cannot hold a 4B model. At home it runs on Ollama with Wi-Fi off.
 
 ## Code
 

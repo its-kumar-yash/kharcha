@@ -6,7 +6,7 @@ A tiny, private expense ledger for my parent. Paste any Indian bank/UPI SMS, or 
 The model runs **offline on a laptop with Ollama**; bank SMS never leave the machine.
 [Backboard](https://backboard.io) remembers the corrections ("Sharma Kirana is groceries",
 "Rahul is my son") and answers Hinglish questions about the month. The demo is hosted on
-[Render](https://render.com).
+[Render](https://render.com): **https://kharcha-4aax.onrender.com** (free tier, ~1 min cold start).
 
 Built for the DEV Hacktoberfest Weekend Challenge "Build for a Friend" (Oct 2026).
 
