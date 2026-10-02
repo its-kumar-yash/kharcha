@@ -12,7 +12,7 @@ My mother keeps a diary. Every evening she copies the day's spending into it by 
 
 She will not install a finance app. She is right not to. Those apps read every SMS on the phone and ship them to a server she has never heard of, and the SMS from a bank is the most private text a person receives.
 
-**Kharcha** (Hindi for "expense") is a small ledger that runs entirely on a laptop. You paste a bank or UPI SMS, or you type what you would have said out loud ("aaj sabzi wale ko 80 diye"), and a 4-billion-parameter open-weight model turns it into one clean row: who, how much, which account, which date, which category. It learns from her corrections. If she changes "Sharma Kirana" from shopping to groceries once, it stays groceries. If she tells it Rahul is her son, transfers to Rahul become family, not "other".
+**Kharcha** (Hindi for "expense") is a small ledger built to run entirely on a laptop. You paste a bank or UPI SMS, or you type what you would have said out loud ("aaj sabzi wale ko 80 diye"), and a 4-billion-parameter open-weight model turns it into one clean row: who, how much, which account, which date, which category. It learns from her corrections. If she changes "Sharma Kirana" from shopping to groceries once, it stays groceries. If she tells it Rahul is her son, transfers to Rahul become family, not "other".
 
 It understands the formats of HDFC, SBI, ICICI, Axis, Kotak and PNB, the PhonePe, Google Pay and Paytm notifications, and Hinglish with spoken numbers like "dhai hazaar" and "baarah sau".
 
@@ -30,7 +30,7 @@ In the recording: a bank SMS and two spoken notes become ledger rows, "Sharma Ki
 
 ## How I Built It
 
-The core is a **LoRA fine-tune of Qwen3.5-4B** trained on [Tinker](https://thinkingmachines.ai/tinker/) and exported to run locally with Ollama. Around it: a FastAPI app with a single HTML page, [Backboard](https://backboard.io) as the memory layer, and [Render](https://render.com) hosting the demo.
+The core is a **LoRA fine-tune of Qwen3.5-4B** trained on [Tinker](https://thinkingmachines.ai/tinker/) and exported as a 146 MB adapter that I own. Around it: a FastAPI app with a single HTML page, [Backboard](https://backboard.io) as the memory layer, and [Render](https://render.com) hosting the demo.
 
 ### 1. A dataset with no labelling errors
 
@@ -73,7 +73,7 @@ Same 150 held-out messages, same prompt, exact-match on every field. The two bas
 
 The four misses are all the same thing: whether "jooti ke 1200 lage" was paid in cash or by an unknown channel. My own labels decide that arbitrarily, so I count those as label noise rather than model error.
 
-Two honest caveats. First, part of the gap is convention: the big model writes `"ATM"` where my label says `"SBI Bank ATM LAJPAT NAGAR"`, and both are defensible. Category accuracy, which has no convention problem, still moves from 81% to 100%. Second, the latency on Tinker is similar across models because it is dominated by queueing; the latency that matters is the offline one on a laptop.
+Two honest caveats. First, part of the gap is convention: the big model writes `"ATM"` where my label says `"SBI Bank ATM LAJPAT NAGAR"`, and both are defensible. Category accuracy, which has no convention problem, still moves from 81% to 100%. Second, the latency on Tinker is similar across models because it is dominated by queueing, so it says little about the size difference; the number that would matter is the offline one on a laptop, which I did not get to measure.
 
 Where the gap is real: the big model calls a petrol pump "other", a Jio recharge "other", a Croma autopay "subscriptions", and misses the date inside a PhonePe transaction ID. The fine-tuned 4B gets every one, because it has seen a thousand of them.
 
@@ -98,7 +98,7 @@ POST /assistants/{id}/memories   {"content": "Treat SHARMA KIRANA STORE as groce
 
 Before parsing the next SMS it runs a semantic search over those memories with the raw message as the query, keeps only hits whose subject actually appears in the text, and prepends them to the system prompt as the *Known rules* block the model was trained on. Memory writes and reads are plain API calls with no LLM in the loop, which is what you want for something as deterministic as "this merchant is groceries".
 
-The Ask box ("is mahine kirane pe kitna gaya?") pulls the relevant memories plus the month's ledger summary and hands them to an open-weight model: the stock Qwen3.5-4B in Ollama at home, gpt-oss-120b through Tinker's sampling API on the hosted demo. Backboard's own chat endpoint is wired in too and takes over automatically when the account has LLM credits, but I liked that the fallback keeps the entire stack open-weight.
+The Ask box ("is mahine kirane pe kitna gaya?") pulls the relevant memories plus the month's ledger summary and hands them to an open-weight model: a stock Qwen3.5 in Ollama at home, Qwen3.5-9B through Tinker's sampling API on the hosted demo (it shares the parser's tokenizer, which is what keeps the service inside Render's 512 MB). Backboard's own chat endpoint is wired in too and takes over automatically when the account has LLM credits (mine only has memory credits), but I liked that the fallback keeps the entire stack open-weight. One detail I got wrong first: that chat call ran with memory on, and Backboard dutifully extracted "user received a salary of..." from the ledger summary into long-term memory. It now runs read-only. The ledger is context, never a memory.
 
 ### 6. Render
 
