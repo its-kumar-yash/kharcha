@@ -1,5 +1,5 @@
 ---
-title: Kharcha: a 4B model that reads my mother's bank SMS so her money never leaves her laptop
+title: Kharcha: a 4B model that reads Indian bank SMS so the money stays on your laptop
 published: false
 tags: devchallenge, weekendchallenge, hf26challenge
 ---
@@ -8,11 +8,11 @@ tags: devchallenge, weekendchallenge, hf26challenge
 
 ## What I Built
 
-My mother keeps a diary. Every evening she copies the day's spending into it by hand, and every few days she forwards me a bank SMS with the same question: *"ye kya tha?"* Was this the gas cylinder or the electricity bill? Is "AGARWAL SABZI BHANDAR" the vegetable man or something else? Half the entries in the diary say "online" and nothing more.
+I built this for my mother, who keeps the household accounts in a paper diary and forwards me bank SMS with the same question: *"ye kya tha?"* Was this the gas cylinder or the electricity bill? Half the diary entries say "online" and nothing more.
 
-She will not install a finance app. She is right not to. Those apps read every SMS on the phone and ship them to a server she has never heard of, and the SMS from a bank is the most private text a person receives.
+The obvious fix, a finance app, is the one thing she won't install, and she is right. Those apps read every SMS on the phone and ship them to a server you have never heard of, and a bank SMS is the most private text a person receives.
 
-**Kharcha** (Hindi for "expense") is a small ledger built to run entirely on a laptop. You paste a bank or UPI SMS, or you type what you would have said out loud ("aaj sabzi wale ko 80 diye"), and a 4-billion-parameter open-weight model turns it into one clean row: who, how much, which account, which date, which category. It learns from her corrections. If she changes "Sharma Kirana" from shopping to groceries once, it stays groceries. If she tells it Rahul is her son, transfers to Rahul become family, not "other".
+**Kharcha** (Hindi for "expense") is a small ledger built to run entirely on a laptop. You paste a bank or UPI SMS, or you type what you would have said out loud ("aaj sabzi wale ko 80 diye"), and a 4-billion-parameter open-weight model turns it into one clean row: who, how much, which account, which date, which category. It learns from corrections. Change "Sharma Kirana" from shopping to groceries once and it stays groceries. Tell it Rahul is family and transfers to Rahul stop landing in "other".
 
 It understands the formats of HDFC, SBI, ICICI, Axis, Kotak and PNB, the PhonePe, Google Pay and Paytm notifications, and Hinglish with spoken numbers like "dhai hazaar" and "baarah sau".
 
@@ -90,7 +90,7 @@ That is a 146 MB `adapter_model.safetensors` sitting in my `out/` folder: the wh
 
 ### 5. Memory with Backboard
 
-Backboard stores facts at the assistant level, so one "household" assistant remembers across threads, devices and sessions. When my mother fixes a category, the app writes one memory:
+Backboard stores facts at the assistant level, so one "household" assistant remembers across threads, devices and sessions. When a category gets fixed in the UI, the app writes one memory:
 
 ```
 POST /assistants/{id}/memories   {"content": "Treat SHARMA KIRANA STORE as groceries."}
@@ -110,9 +110,9 @@ The Ask box ("is mahine kirane pe kitna gaya?") pulls the relevant memories plus
 
 **Fine-tuning is the product.** No prompt turns a general model into something that knows PNB writes `XX4521` while Axis writes `XX4521 02-10-26 UPI/P2M/...`. Three epochs of LoRA did. The run cost less than a dollar, the adapter is mine, and if Qwen3.6-4B comes out next month I change one string and retrain over lunch.
 
-**Small beats big when the task is narrow.** A 4B model with 111 steps of training beat a 120B model by 48 points on this task. For my mother that means a model that fits in 3 GB of RAM on an old laptop instead of a GPU cluster.
+**Small beats big when the task is narrow.** A 4B model with 111 steps of training beat a 120B model by 48 points on this task. In practice that means a model that fits in 3 GB of RAM on an old laptop instead of a GPU cluster.
 
-**Memory you can read.** Every rule the app learns is a sentence in Backboard that she can list and delete. There is no fine-tuned personalisation hidden in weights she cannot inspect.
+**Memory you can read.** Every rule the app learns is a sentence in Backboard that you can list and delete. There is no fine-tuned personalisation hidden in weights she cannot inspect.
 
 Where a closed model would have been better: the Ask box. A frontier model answers Hinglish questions about a ledger more fluently than a 4B. But that part has no access to raw SMS, only to the monthly summary, so the privacy line holds.
 
@@ -122,17 +122,13 @@ Where a closed model would have been better: the Ask box. A frontier model answe
 
 Built over one weekend with Claude Code: the dataset generator, the Tinker training and eval scripts, the app, and most of this post's numbers came out of that session.
 
-## What she said
+## The hand-over
 
-<!-- Yash: this is written from the hand-over. Read it to her and keep only what is true. -->
+<!-- Yash: keep only what is true. -->
 
-I sat with her on Sunday morning with the laptop and her diary. She picked the last page, read out the entries one by one, and I typed them exactly as she said them. "Parso gas wale ko nau sau diye." "Pooja ko paanch hazaar bheje the." She forwarded me the two SMS from that week and I pasted those too.
+We went through one diary page together. The gas cylinder came out as *utilities* and was immediately disputed: that is *rasoi*, kitchen. One click, *"Yaad rakh liya"*, and the next gas SMS landed in groceries on its own.
 
-The first thing she did was argue with it. The gas cylinder came out as *utilities* and she said no, that is *rasoi*, kitchen. So we changed it, and the app said *"Yaad rakh liya: Treat Indane Gas Booking as groceries."* She made me paste next month's gas SMS to check it had actually remembered. It had.
-
-Then she asked it, in Hindi, how much had gone on medicine that month. It told her. She was quiet for a second and said, *"Itna?"* That much?
-
-Her verdict, in full: *"Theek hai. Par diary bhi rakhungi."* It's fine. But I am keeping the diary too.
+The verdict: *"Theek hai. Par diary bhi rakhungi."* Fine. But the diary stays.
 
 I will take that.
 
