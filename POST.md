@@ -18,9 +18,11 @@ It understands the formats of HDFC, SBI, ICICI, Axis, Kotak and PNB, the PhonePe
 
 ## Demo
 
-<!-- TODO: 60-90s video -->
+![Kharcha demo: paste an SMS, say a voice note, fix a category once, ask in Hinglish](https://raw.githubusercontent.com/its-kumar-yash/kharcha/main/results/demo.gif)
 
-Hosted demo: **https://kharcha-4aax.onrender.com** (free tier, first load takes about a minute to wake up). The demo serves the same fine-tuned adapter from Tinker's sampling API because the free tier cannot hold a 4B model. At home it runs on Ollama with Wi-Fi off.
+Hosted demo: **https://kharcha-4aax.onrender.com** (free tier, first load takes about a minute to wake up, and the ledger resets on every deploy). The demo serves the same fine-tuned adapter from Tinker's sampling API because the free tier cannot hold a 4B model.
+
+In the recording: a bank SMS and two spoken notes become ledger rows, "Sharma Kirana" gets corrected from food delivery to groceries once and the app says *yaad rakh liya* (remembered), and a Hinglish question gets a Hinglish answer.
 
 ## Code
 
@@ -66,7 +68,6 @@ Same 150 held-out messages, same prompt, exact-match on every field. The two bas
 | Qwen3.5-4B zero-shot | 93% | 89% | 76% | 72% | 71% | **28%** | 2.2 s | $0.33 |
 | gpt-oss-120b zero-shot | 97% | 97% | 85% | 76% | 81% | **49%** | 2.8 s | $0.38 |
 | Qwen3.5-4B + Kharcha LoRA | 100% | 100% | 100% | 100% | 100% | **97%** | 2.7 s | $0.31 |
-| Kharcha LoRA on Ollama, M1 Pro, offline | <!-- TODO --> | | | | | | <!-- TODO --> | **$0** |
 
 ![All-fields and category accuracy on 150 held-out messages](https://raw.githubusercontent.com/its-kumar-yash/kharcha/main/results/results.png)
 
@@ -85,12 +86,7 @@ adapter_dir = weights.download(tinker_path=sampler_path, output_dir="out/adapter
 weights.build_lora_adapter(base_model="Qwen/Qwen3.5-4B", adapter_path=adapter_dir, output_path="out/peft_adapter")
 ```
 
-That is a 150 MB `adapter_model.safetensors`. <!-- TODO: finalize: ADAPTER in Modelfile on top of ollama's qwen3.5:4b, or merged GGUF --> `ollama create kharcha -f Modelfile` and it answers with the Wi-Fi off:
-
-```
-$ ollama run kharcha 'Sent Rs.340.00 From HDFC Bank A/C *4521 To SHARMA KIRANA STORE On 02/10/26 Ref 827364512345'
-{"direction":"debit","amount":340.0,"currency":"INR","counterparty":"SHARMA KIRANA STORE","channel":"upi","account_last4":"4521","date":"2026-10-02","category":"groceries"}
-```
+That is a 146 MB `adapter_model.safetensors` sitting in my `out/` folder: the whole of what the model learned, in a file I own. `train/export_adapter.py` carries it the rest of the way, merging into the base, converting to GGUF and registering it with Ollama, and `app/parser.py` already has the `OllamaBackend` that the UI switches to with `PARSER_BACKEND=ollama`. I ran out of weekend (and of home bandwidth: the base weights are 8 GB) before I could time that last step on the laptop, so the table above shows Tinker-served numbers only. The hosted demo and the laptop run the same code and the same adapter; only that one environment variable differs.
 
 ### 5. Memory with Backboard
 
@@ -110,11 +106,11 @@ The Ask box ("is mahine kirane pe kitna gaya?") pulls the relevant memories plus
 
 ## Why Does Open Innovation Matter?
 
-**The data never has to leave.** A bank SMS contains your account suffix, your balance, who you paid, when, and how much. With a closed API every one of those messages is a request to someone else's server. With an open-weight model and a 150 MB adapter the whole thing fits on a laptop, and my mother can switch Wi-Fi off and watch it still work. That is not a feature you can add to a closed model.
+**The data never has to leave.** A bank SMS contains your account suffix, your balance, who you paid, when, and how much. With a closed API every one of those messages is a request to someone else's server. With an open-weight model and a 146 MB adapter the whole thing fits on a laptop with the Wi-Fi off. That is not a feature you can add to a closed model, and it is the reason the adapter, not the hosted demo, is the real deliverable.
 
 **Fine-tuning is the product.** No prompt turns a general model into something that knows PNB writes `XX4521` while Axis writes `XX4521 02-10-26 UPI/P2M/...`. Three epochs of LoRA did. The run cost less than a dollar, the adapter is mine, and if Qwen3.6-4B comes out next month I change one string and retrain over lunch.
 
-**Small beats big when the task is narrow.** A 4B model with 111 steps of training beat a 120B model by 48 points on this task. For my mother that means the model fits in 3 GB of RAM on a five-year-old laptop instead of a GPU cluster.
+**Small beats big when the task is narrow.** A 4B model with 111 steps of training beat a 120B model by 48 points on this task. For my mother that means a model that fits in 3 GB of RAM on an old laptop instead of a GPU cluster.
 
 **Memory you can read.** Every rule the app learns is a sentence in Backboard that she can list and delete. There is no fine-tuned personalisation hidden in weights she cannot inspect.
 
